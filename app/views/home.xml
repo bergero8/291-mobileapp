@@ -1,0 +1,10 @@
+<Alloy>
+	<View id="Wrapper">
+		<Require type="widget" src="com.mcongrove.navigationBar" id="NavigationBar" image="logo.png" />
+		<View id="content" layout="vertical">
+			<Button id="setup">Setup</Button>
+			<TextField hintText="Username"></TextField>
+			<Button>Login</Button>
+		</View>
+	</View>
+</Alloy>

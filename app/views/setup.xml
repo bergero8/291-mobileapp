@@ -1,0 +1,8 @@
+<Alloy>
+	<View id="Wrapper">
+		<Require type="widget" src="com.mcongrove.navigationBar" id="NavigationBar" image="logo.png" />
+
+		<Label>I'm the setup page.</Label>
+		
+	</View>
+</Alloy>
