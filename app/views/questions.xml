@@ -1,4 +1,15 @@
 <Alloy>
-	<View class="container">
+	<View class="container" layout="vertical">
+		<Require type="widget" src="com.mcongrove.navigationBar" id="NavigationBar" image="logo.png" />
+		
+	<View id="quesTopView" height="50%" width=Ti.UI.Fill>
+		
+		<ImageView id="image" image="/piggy_bank1.jpg" width="300dp"/>
+		</View>
+
+	<View id="quesBottomView" height="50%" width=Ti.UI.Fill>
+		<TableView id="quesTable"> </TableView>
 	</View>
+	</View>
+
 </Alloy>
