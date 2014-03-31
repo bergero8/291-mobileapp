@@ -1,8 +1,15 @@
 <Alloy>
-	<View id="Wrapper">
-		<Require type="widget" src="com.mcongrove.navigationBar" id="NavigationBar" image="logo.png" />
+	<View id="Wrapper" layout="vertical">
 
-		<Label>I'm the setup page.</Label>
-		
+		<Require type="widget" src="com.mcongrove.navigationBar" id="NavigationBar" image="logo.png" />
+	
+		<TextField id="txtName" hintText="Name" borderStyle="Ti.UI.INPUT_BORDERSTYLE_ROUNDED" color="#336699" top="10" left="10" width="250" height="60" />
+		<TextField id="txtPassword" hintText="Password" borderStyle="Ti.UI.INPUT_BORDERSTYLE_ROUNDED" color="#336699" top="10" left="10" width="250" height="60" />
+       	<TextField id="txtGoal1" hintText="First Goal" borderStyle="Ti.UI.INPUT_BORDERSTYLE_ROUNDED" color="#336699" top="10" left="10" width="250" height="60" />
+       	<TextField id="txtGoal2" hintText="Second Goal" borderStyle="Ti.UI.INPUT_BORDERSTYLE_ROUNDED" color="#336699" top="10" left="10" width="250" height="60" />
+      	<TextField id="txtGoal3" hintText="Third Goal" borderStyle="Ti.UI.INPUT_BORDERSTYLE_ROUNDED" color="#336699" top="10" left="10" width="250" height="60" />
+   
+	    <Button id="btnSubmit">Submit</Button>
+   		
 	</View>
 </Alloy>

@@ -22,7 +22,7 @@
         <target device="android">true</target>
         <target device="blackberry">false</target>
     </deployment-targets>
-    <sdk-version>3.2.2.GA</sdk-version>
+    <sdk-version>3.2.1.GA</sdk-version>
     <id>edu.uwm.momApp</id>
     <name>Mom App</name>
     <version>1.2.1</version>
@@ -86,6 +86,8 @@
     <modules>
         <module platform="commonjs" version="3.2.0">ti.cloud</module>
         <module platform="iphone">dk.napp.social</module>
+        <module platform="android">facebook</module>
+    	<module platform="iphone">facebook</module><!-- **************** -->
     </modules>
     <plugins>
         <plugin version="1.0">ti.alloy</plugin>
