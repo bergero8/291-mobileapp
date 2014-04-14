@@ -55,7 +55,7 @@ windowFunctions['Select Users for ACL'] = function (evt) {
                 ]);
                 error(e);
             }
-        })
+        });
     }
 
     win.addEventListener('open', function () {

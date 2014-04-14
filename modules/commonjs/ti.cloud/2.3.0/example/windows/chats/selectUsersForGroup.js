@@ -85,7 +85,7 @@ windowFunctions['Select Users for Group'] = function (evt) {
                 ]);
                 error(e);
             }
-        })
+        });
     }
 
     win.addEventListener('open', function () {

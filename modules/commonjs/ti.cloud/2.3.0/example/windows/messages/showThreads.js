@@ -42,7 +42,7 @@ windowFunctions['Show Threads'] = function (evt) {
                 ]);
                 error(e);
             }
-        })
+        });
     }
 
     win.addEventListener('open', showThreads);

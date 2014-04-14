@@ -42,7 +42,7 @@ windowFunctions['Show Inbox'] = function (evt) {
                 ]);
                 error(e);
             }
-        })
+        });
     }
 
     win.addEventListener('open', showInbox);

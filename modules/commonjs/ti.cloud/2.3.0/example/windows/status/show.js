@@ -33,7 +33,7 @@ windowFunctions['Show Status for User'] = function (evt) {
                 else {
                     error(e);
                 }
-            })
+            });
         }
     });
     win.add(table);

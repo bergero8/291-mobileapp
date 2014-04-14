@@ -63,7 +63,7 @@ windowFunctions['Approve Friends'] = function (evt) {
                 ]);
                 error(e);
             }
-        })
+        });
     }
 
     win.addEventListener('open', getRequests);

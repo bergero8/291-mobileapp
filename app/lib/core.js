@@ -480,7 +480,7 @@ var APP = {
 
 		// Listen for gestures on the main window to open/close the slide menu
 		APP.GlobalWrapper.addEventListener("swipe", function(_event) {
-			if(APP.SlideMenuEngaged && Alloy.Globals.swipeEnabled) {
+			if(APP.SlideMenuEngaged) {
 				if(_event.direction == "right") {
 					APP.openMenu();
 				} else if(_event.direction == "left") {

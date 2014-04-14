@@ -79,7 +79,7 @@ windowFunctions['Add Friends'] = function (evt) {
                 ]);
                 error(e);
             }
-        })
+        });
     }
 
     win.addEventListener('open', function () {

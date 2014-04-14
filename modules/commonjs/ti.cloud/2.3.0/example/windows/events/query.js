@@ -42,7 +42,7 @@ windowFunctions['Query Events'] = function (evt) {
                 ]);
                 error(e);
             }
-        })
+        });
     }
 
     win.addEventListener('open', queryEvents);

@@ -52,7 +52,7 @@ windowFunctions['Select Users for Message'] = function (evt) {
                 ]);
                 error(e);
             }
-        })
+        });
     }
 
     win.addEventListener('open', function () {

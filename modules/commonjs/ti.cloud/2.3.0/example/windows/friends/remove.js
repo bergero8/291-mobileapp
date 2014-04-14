@@ -79,7 +79,7 @@ windowFunctions['Remove Friends'] = function (evt) {
                 ]);
                 error(e);
             }
-        })
+        });
     }
 
     win.addEventListener('open', function () {

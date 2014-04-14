@@ -42,7 +42,7 @@ windowFunctions['Search Events'] = function (evt) {
                 ]);
                 error(e);
             }
-        })
+        });
     }
 
     win.addEventListener('open', searchEvents);

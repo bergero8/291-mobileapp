@@ -39,7 +39,7 @@ windowFunctions['Search Friends'] = function (evt) {
                 ]);
                 error(e);
             }
-        })
+        });
     }
 
     win.addEventListener('open', queryUsers);

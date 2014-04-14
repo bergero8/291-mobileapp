@@ -52,7 +52,7 @@ function disablePushNotifications() {
 
 function getAndroidPushModule() {
     try {
-        return require('ti.cloudpush')
+        return require('ti.cloudpush');
     }
     catch (err) {
         alert('Unable to require the ti.cloudpush module for Android!');

@@ -47,8 +47,7 @@ windowFunctions['Show Messages In Thread'] = function (evt) {
                     { title: (e.error && e.message) || e }
                 ]);
                 error(e);
-            }
-        })
+            };
     }
 
     win.addEventListener('open', showThreadMessages);

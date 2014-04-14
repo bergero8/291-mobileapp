@@ -1,4 +1,4 @@
-var args = arguments[0] || {};
+//jkvar args = arguments[0] || {};
 var APP = require("core");
 $.NavigationBar.setBackgroundColor(APP.Settings.colors.primary);
 $.NavigationBar.showBack(function(_event) {

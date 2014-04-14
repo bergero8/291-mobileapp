@@ -42,7 +42,7 @@ windowFunctions['Show Sent'] = function (evt) {
                 ]);
                 error(e);
             }
-        })
+        });
     }
 
     win.addEventListener('open', showSent);

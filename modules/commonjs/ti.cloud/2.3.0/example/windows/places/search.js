@@ -72,7 +72,7 @@ windowFunctions['Search Place'] = function (evt) {
                     table.setData([
                         { title: 'Located, looking nearby...' }
                     ]);
-                    findPlaces(e.location.latitude, e.location.longitude)
+                    findPlaces(e.location.latitude, e.location.longitude);
                 }
                 else {
                     findPlaces(null, null);
