@@ -3,13 +3,4 @@ build.log
 build
 npm-debug.log
 tmp
-<<<<<<< HEAD
 .map
-=======
-/build
-/.settings
-/.pydevproject
-/docs/documentation/
-/docs/documentation/**
-/Resources/*
->>>>>>> d686fbcc2c03998b5dd7955b4b8e44426afed455

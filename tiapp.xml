@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
-<<<<<<< HEAD
     <property name="acs-oauth-secret-production" type="string">5l6WJwpMrfZNa7ifkWW1jykcZ02HOQzV</property>
     <property name="acs-oauth-key-production" type="string">8iwNx1BnX9eY2Z2altB0ju7ueguggxci</property>
     <property name="acs-api-key-production" type="string">9GJqs5hJU7d8vzo5kIIKgahYg6latcy1</property>
@@ -14,38 +13,6 @@
     <url>http://</url>
     <description>not specified</description>
     <copyright>2014 by colfax</copyright>
-=======
-    <property name="acs-oauth-secret-production" type="string">KbWJllelez6zf8qQ0mJCCNmJKghRoFY4</property>
-    <property name="acs-oauth-key-production" type="string">VZXyze8IIw4uGFGfL5D44vNfjbsRkXfK</property>
-    <property name="acs-api-key-production" type="string">kz9cS2OEMUFXXst8aPdfFa9I34SRTBTa</property>
-    <property name="acs-oauth-secret-development" type="string">7Ahwwb0CyGo87mQk0GlHhwaOgOJwMJNW</property>
-    <property name="acs-oauth-key-development" type="string">JyoHaOimupcogj1XxYp2pCZBYbPyc7Hr</property>
-    <property name="acs-api-key-development" type="string">PtZ6CfUAL92288zMc3FrP5Qkxa68LJVD</property>
-    <!-- 
-    <property name="acs-oauth-secret-production" type="string"></property>
-    <property name="acs-oauth-key-production" type="string"></property>
-    <property name="acs-api-key-production" type="string"></property>
-    <property name="acs-oauth-secret-development" type="string"></property>
-    <property name="acs-oauth-key-development" type="string"></property>
-    <property name="acs-api-key-development" type="string"></property>	
-    -->
-    <deployment-targets>
-        <target device="tizen">false</target>
-        <target device="mobileweb">false</target>
-        <target device="iphone">true</target>
-        <target device="ipad">true</target>
-        <target device="android">true</target>
-        <target device="blackberry">false</target>
-    </deployment-targets>
-    <sdk-version>3.2.1.GA</sdk-version>
-    <id>edu.uwm.momApp</id>
-    <name>Mom App</name>
-    <version>1.2.1</version>
-    <publisher>craig and meghan</publisher>
-    <url>http://chariti.mobi</url>
-    <description>ChariTi is a framework built to allow charities to quickly and easily create mobile applications.</description>
-    <copyright>2013 by Matthew Congrove</copyright>
->>>>>>> d686fbcc2c03998b5dd7955b4b8e44426afed455
     <icon>appicon.png</icon>
     <fullscreen>false</fullscreen>
     <navbar-hidden>false</navbar-hidden>
@@ -87,15 +54,7 @@
         <theme>default</theme>
     </mobileweb>
     <modules>
-<<<<<<< HEAD
         <module platform="commonjs">ti.cloud</module>
-=======
-        <module platform="commonjs" version="3.2.0">ti.cloud</module>
-        <module platform="iphone">dk.napp.social</module>
-        <module platform="android">facebook</module>
-        <module platform="iphone">facebook</module>
-        <!-- **************** -->
->>>>>>> d686fbcc2c03998b5dd7955b4b8e44426afed455
     </modules>
     <deployment-targets>
         <target device="iphone">false</target>

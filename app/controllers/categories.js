@@ -5,12 +5,12 @@ $.NavigationBar.showBack(function(_event) {
 	APP.removeChild();
 });
 
-var buttmoney = Titanium.UI.createButton({
+var b3 = Titanium.UI.createButton({
 	color: '#fff',
 	backgroundImage: '/money.jpg',
 	//backgroundSelectedImage: '../images/BUTT_grn_on.png',
 	//backgroundDisabledImage: '../images/BUTT_drk_off.png',
-	left: 80,
+	leftt: 80,
 	width: 57,
 	height: 57,
 	/*font: {
@@ -20,31 +20,22 @@ var buttmoney = Titanium.UI.createButton({
 	},
 	title: 'Purchase'*/
 });
-var buttplane = Titanium.UI.createButton({
+var b4 = Titanium.UI.createButton({
 	color: '#fff',
 	backgroundImage: '/plane.jpg',
-	//left: 137,
-	width: 57,
-	height: 57,
-
-});
-var butthealth = Titanium.UI.createButton({
-	color: '#fff',
-	backgroundImage: '/health.jpg',
-	//left: 217,
+	left: 145,
 	width: 57,
 	height: 57,
 
 });
 
-buttmoney.addEventListener('click', function(e) {
+b3.addEventListener('click', function(e) {
 	APP.addChild('questions');
 
 });
 
-$.viewCat.add(buttmoney);
-$.viewCat.add(buttplane);
-$.viewCat.add(butthealth);
+$.viewCat.add(b3);
+$.viewCat.add(b4);
 
 /*$.btnFinance.addEventListener('click', function(e) {
 	APP.addChild('questions');
