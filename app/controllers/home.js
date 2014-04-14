@@ -66,6 +66,9 @@ $.btnLogin.addEventListener("click", function() {
 			alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
 		}
 	});
+
 });
 
 init();
+
+
