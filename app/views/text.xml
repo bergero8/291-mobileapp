@@ -4,7 +4,7 @@
 		
 		<ScrollView id="container">
 			<Label id="heading" />
-			
+			<ImageView id="image" image="/Army.png" width="300dp" />
 			<Label id="text" />
 			
 		</ScrollView>

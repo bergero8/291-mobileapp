@@ -27,6 +27,9 @@ if(CONFIG.isChild === true) {
 		});
 	} else {
 		$.NavigationBar.showSettings(function(_event) {
+			//$.setup.addEventListener("click", function() {
+			//APP.addChild("setup");
+			//});
 			APP.openSettings();
 		});
 	}
