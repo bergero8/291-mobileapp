@@ -1,58 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
-    <property name="acs-oauth-secret-production" type="string">KbWJllelez6zf8qQ0mJCCNmJKghRoFY4</property>
-    <property name="acs-oauth-key-production" type="string">VZXyze8IIw4uGFGfL5D44vNfjbsRkXfK</property>
-    <property name="acs-api-key-production" type="string">kz9cS2OEMUFXXst8aPdfFa9I34SRTBTa</property>
-    <property name="acs-oauth-secret-development" type="string">7Ahwwb0CyGo87mQk0GlHhwaOgOJwMJNW</property>
-    <property name="acs-oauth-key-development" type="string">JyoHaOimupcogj1XxYp2pCZBYbPyc7Hr</property>
-    <property name="acs-api-key-development" type="string">PtZ6CfUAL92288zMc3FrP5Qkxa68LJVD</property>
-    <!-- 
-    <property name="acs-oauth-secret-production" type="string"></property>
-    <property name="acs-oauth-key-production" type="string"></property>
-    <property name="acs-api-key-production" type="string"></property>
-    <property name="acs-oauth-secret-development" type="string"></property>
-    <property name="acs-oauth-key-development" type="string"></property>
-    <property name="acs-api-key-development" type="string"></property>	
-    -->
-    <deployment-targets>
-        <target device="tizen">false</target>
-        <target device="mobileweb">false</target>
-        <target device="iphone">true</target>
-        <target device="ipad">true</target>
-        <target device="android">true</target>
-        <target device="blackberry">false</target>
-    </deployment-targets>
-    <sdk-version>3.2.1.GA</sdk-version>
-    <id>edu.uwm.momApp</id>
-    <name>Mom App</name>
-    <version>1.2.1</version>
-    <publisher>craig and meghan</publisher>
-    <url>http://chariti.mobi</url>
-    <description>ChariTi is a framework built to allow charities to quickly and easily create mobile applications.</description>
-    <copyright>2013 by Matthew Congrove</copyright>
+    <property name="acs-oauth-secret-production" type="string">5l6WJwpMrfZNa7ifkWW1jykcZ02HOQzV</property>
+    <property name="acs-oauth-key-production" type="string">8iwNx1BnX9eY2Z2altB0ju7ueguggxci</property>
+    <property name="acs-api-key-production" type="string">9GJqs5hJU7d8vzo5kIIKgahYg6latcy1</property>
+    <property name="acs-oauth-secret-development" type="string">L9HtEI463rlyOjAusPYfV9jgkjNDs8rI</property>
+    <property name="acs-oauth-key-development" type="string">fOyiK734q6hr8yCjpf9T2PjKcqv6fxAf</property>
+    <property name="acs-api-key-development" type="string">KnInkEXfYyalDqxQ9rYgAzfDTVbajjXJ</property>
+    <id>edu.uwm.www</id>
+    <name>MomBeta</name>
+    <version>1.0</version>
+    <publisher>colfax</publisher>
+    <url>http://</url>
+    <description>not specified</description>
+    <copyright>2014 by colfax</copyright>
     <icon>appicon.png</icon>
     <fullscreen>false</fullscreen>
     <navbar-hidden>false</navbar-hidden>
-    <analytics>false</analytics>
-    <guid>66774a0a-ba43-45f5-9686-f2de98701f32</guid>
-    <property name="ti.ui.defaultunit">dip</property>
+    <analytics>true</analytics>
+    <guid>f39ed056-9f66-4205-9e7f-99971f8bb031</guid>
+    <property name="ti.ui.defaultunit" type="string">dp</property>
     <ios>
-        <min-ios-ver>4.3</min-ios-ver>
         <plist>
             <dict>
-                <key>UIRequiresPersistentWiFi</key>
-                <false/>
-                <key>UIPrerenderedIcon</key>
-                <true/>
-                <key>UIStatusBarHidden</key>
-                <false/>
-                <key>UIStatusBarStyle</key>
-                <string>UIStatusBarStyleDefault</string>
                 <key>UISupportedInterfaceOrientations~iphone</key>
-                <array>
-                    <string>UIInterfaceOrientationPortrait</string>
-                </array>
-                <key>UISupportedInterfaceOrientations~ipod</key>
                 <array>
                     <string>UIInterfaceOrientationPortrait</string>
                 </array>
@@ -63,18 +33,18 @@
                     <string>UIInterfaceOrientationLandscapeLeft</string>
                     <string>UIInterfaceOrientationLandscapeRight</string>
                 </array>
-                <key>UIBackgroundModes</key>
-                <array>
-                    <string>audio</string>
-                </array>
+                <key>UIRequiresPersistentWiFi</key>
+                <false/>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+                <key>UIStatusBarHidden</key>
+                <false/>
+                <key>UIStatusBarStyle</key>
+                <string>UIStatusBarStyleDefault</string>
             </dict>
         </plist>
     </ios>
-    <android xmlns:android="http://schemas.android.com/apk/res/android">
-        <manifest>
-            <uses-sdk android:minSdkVersion="10"/>
-        </manifest>
-    </android>
+    <android xmlns:android="http://schemas.android.com/apk/res/android"/>
     <mobileweb>
         <precache/>
         <splash>
@@ -84,12 +54,17 @@
         <theme>default</theme>
     </mobileweb>
     <modules>
-        <module platform="commonjs" version="3.2.0">ti.cloud</module>
-        <module platform="iphone">dk.napp.social</module>
-        <module platform="android">facebook</module>
-        <module platform="iphone">facebook</module>
-        <!-- **************** -->
+        <module platform="commonjs">ti.cloud</module>
     </modules>
+    <deployment-targets>
+        <target device="iphone">false</target>
+        <target device="ipad">false</target>
+        <target device="android">true</target>
+        <target device="blackberry">false</target>
+        <target device="mobileweb">true</target>
+        <target device="tizen">false</target>
+    </deployment-targets>
+    <sdk-version>3.2.2.GA</sdk-version>
     <plugins>
         <plugin version="1.0">ti.alloy</plugin>
     </plugins>
