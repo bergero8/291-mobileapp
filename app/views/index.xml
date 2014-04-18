@@ -4,7 +4,7 @@
 		
 		<View id="GlobalWrapper">
 			<View id="ContentWrapper" />
-			
+			<ImageView id="image" image="/Army.png" width="300dp" />
 			<Require type="widget" src="com.mcongrove.tabs" id="Tabs" />
 		</View>
 	</Window>
