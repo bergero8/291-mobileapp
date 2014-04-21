@@ -1,6 +1,7 @@
 <Alloy>
 	<View id="Wrapper" name="Text">
-		<Require type="widget" src="com.mcongrove.navigationBar" id="NavigationBar" image="data/logo.png" />
+		<!--<Require type="widget" src="com.mcongrove.navigationBar" id="NavigationBar" image="data/logo.png" />-->
+		<Require type="widget" src="com.mcongrove.navigationBar" id="NavigationBar" image="data/ab.fw.png" />
 		
 		<ScrollView id="container">
 			<Label id="heading" />

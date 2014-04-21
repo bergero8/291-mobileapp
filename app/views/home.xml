@@ -3,7 +3,7 @@
 		<Require type="widget" src="com.mcongrove.navigationBar" id="NavigationBar" image="logo.png" />
 		<View id="content" layout="vertical">
 			
-			<ImageView id="image" image="/mom2.jpg" width="301dp"/>
+			<ImageView id="image" image="/Sergeant_Hartman.jpg" width="301dp"/>
 			<View id="bottomView" layout="vertical">
 				<!--<Button id="setup" left="50dp">Setup</Button>-->
 				
