@@ -1,8 +1,0 @@
-<Alloy>
-	<View id="viewCat" class="container" layout="vertical">
-		<Require type="widget" src="com.mcongrove.navigationBar" id="NavigationBar" image="logo.png" />
-		
-		<!--<Button id = "btnFinance">Finance</Button>-->
-		
-	</View>
-</Alloy>

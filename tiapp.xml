@@ -7,7 +7,7 @@
     <property name="acs-oauth-key-development" type="string">fOyiK734q6hr8yCjpf9T2PjKcqv6fxAf</property>
     <property name="acs-api-key-development" type="string">KnInkEXfYyalDqxQ9rYgAzfDTVbajjXJ</property>
     <id>edu.uwm.www</id>
-    <name>MomBeta</name>
+    <name>Finance Drill Sergeant</name>
     <version>1.0</version>
     <publisher>colfax</publisher>
     <url>http://</url>

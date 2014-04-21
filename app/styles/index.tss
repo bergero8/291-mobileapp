@@ -1,6 +1,5 @@
 "#MainWindow": {
 	backgroundColor: "#EEE",
-
 },
 "#MainWindow[platform=android]": {
 	navBarHidden: true,

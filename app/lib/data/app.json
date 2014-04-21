@@ -17,7 +17,11 @@
 			"secret": "s-RDQejhRwmx-j4DCaXPMw"
 		},
 		"colors": {
+<<<<<<< HEAD
 			"primary": "#F5A9D0",
+=======
+			"primary": "#04B404",
+>>>>>>> 5096260e07b59fb312091702380733723d8a2844
 			"secondary": "#569BBE"
 		},
 		"useSlideMenu": true
@@ -28,20 +32,20 @@
 	],
 	"tabs": [
 		{
-			"menuHeader": "My Tabs",
-			"title": "Text",
-			"heading": "Open Source Mobile Framework for Charities",
-			"text": "The ChariTi framework is built to allow the often-times small team of staffers at charities around the world to build a mobile application. This is achieved by removing the requirement for a highly-knowledgeable technical staff or costly app development firm and instead allowing app creation and management by anyone from a marketing director to an intern.",
+			"menuHeader": "Master Control",
+			"title": "Home",
+			"heading": "Finance Platoon",
+			"text": "Welcome soldier! Ready to meet your financial goals? Check out slide-menu to left or click.......",
 			"type": "text",
-			"image": "chariti",
+			"image": "tank",
 			"tabletSupport": false
 		},
 		{
-			"title": "Another Menu Option",
+			"title": "Setup",
 			"heading": "This becomes CONFIG.heading in the text.js controller.",
 			"text": "This becomes CONFIG.text in the text.js controller.",
-			"type": "text",
-			"image": "chariti",
+			"type": "Click here to setup app",
+			"image": "tank",
 			"tabletSupport": false
 		}
 	]

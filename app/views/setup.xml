@@ -1,15 +1,56 @@
 <Alloy>
-	<View id="Wrapper" layout="vertical">
-
-		<Require type="widget" src="com.mcongrove.navigationBar" id="NavigationBar" image="logo.png" />
-	
-		<TextField id="txtName" hintText="Name" borderStyle="Ti.UI.INPUT_BORDERSTYLE_ROUNDED" color="#336699" top="10" left="10" width="250" height="60" />
-		<TextField id="txtPassword" hintText="Password" borderStyle="Ti.UI.INPUT_BORDERSTYLE_ROUNDED" color="#336699" top="10" left="10" width="250" height="60" />
-       	<TextField id="txtGoal1" hintText="First Goal" borderStyle="Ti.UI.INPUT_BORDERSTYLE_ROUNDED" color="#336699" top="10" left="10" width="250" height="60" />
-       	<TextField id="txtGoal2" hintText="Second Goal" borderStyle="Ti.UI.INPUT_BORDERSTYLE_ROUNDED" color="#336699" top="10" left="10" width="250" height="60" />
-      	<TextField id="txtGoal3" hintText="Third Goal" borderStyle="Ti.UI.INPUT_BORDERSTYLE_ROUNDED" color="#336699" top="10" left="10" width="250" height="60" />
-   
-	    <Button id="btnSubmit">Submit</Button>
-   		
+	<View id="Wrapper" name="Setup">
+		<Require type="widget" src="com.mcongrove.navigationBar" id="NavigationBar" image="data/logo.png" />
+		
+		<!--<ScrollView id="container">-->
+			<ScrollView id="container" backgroundColor="white" top="40" layout="vertical">
+				<TableView id="legal_table" height="120dp">
+					<TableViewRow id="goal" title="Financial Goal" >
+						 <TextField id="textField" hintText="Goal" color="#336699" width="300"  height="50" />
+  					</TableViewRow>
+					<TableViewRow id="cost" title="Total Cost" hasChild="true" />
+					<TableViewRow id="time" title="Time to achieve" hasChild="true" />
+				</TableView>
+				<View id="btnView" layout="horizontal" center="true">
+					<Button id="btnYear">Year</Button>
+					<Button id="btnMonth">Month</Button>
+					<Button id="btnWeek">Week</Button>
+				</View>
+			
+				<!--<TableView id="logs_table" height="90dp">
+					<TableViewRow id="logs" title="Send Application Logs" hasChild="true" />
+					<TableViewRow id="acknowledgements" title="Acknowledgements" hasChild="true" />
+			</TableView>-->
+			
+				<Label id="copyright" />
+				<Label id="version" />
+				<Label text="blah blah blah" />
+				<Label id="chariti" />
+			
+		<Button>HELP!!!</Button>
+		
+		</ScrollView>
 	</View>
 </Alloy>
+
+<!--
+	<View id="Wrapper" name="Settings">
+		<Require type="widget" src="com.mcongrove.navigationBar" id="NavigationBar" image="data/logo.png" />
+		
+		<ScrollView id="container">
+			<TableView id="legal_table" height="90dp">
+				<TableViewRow id="terms" title="Terms of Service" hasChild="true" />
+				<TableViewRow id="privacy" title="Privacy Policy" hasChild="true" />
+			</TableView>
+			
+			<TableView id="logs_table" height="90dp">
+				<TableViewRow id="logs" title="Send Application Logs" hasChild="true" />
+				<TableViewRow id="acknowledgements" title="Acknowledgements" hasChild="true" />
+			</TableView>
+			
+			<Label id="copyright" />
+			<Label id="version" />
+			<Label text="This application was created using the open source ChariTi framework, freely available at:\nhttp://chariti.mobi" />
+			<Label id="chariti" />
+		</ScrollView>
+	</View>-->

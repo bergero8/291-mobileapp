@@ -1,11 +1,28 @@
-var APP = require("core");
-var CONFIG = arguments[0];
-$.NavigationBar.setBackgroundColor(APP.Settings.colors.primary);
-$.NavigationBar.showBack(function(_event) {
-	APP.removeChild();
-});
+	/**
+	 * 
+	 * @class Controllers.settings
+	 * @uses core
+	 */
+	var APP = require("core");
 
-$.btnSubmit.addEventListener('click', function(e) {
-	APP.addChild('categories');
+	/**
+	 * Initializes the controller
+	 */
+	$.init = function() {
+		APP.log("debug", "setup.init");
 
-});
+		$.NavigationBar.setBackgroundColor(APP.Settings.colors.primary);
+
+		if(APP.Settings.useSlideMenu) {
+			$.NavigationBar.showMenu(function(_event) {
+				APP.toggleMenu();
+			});
+		} else {
+			$.NavigationBar.showBack(function(_event) {
+				APP.removeChild(true);
+			});
+		}
+	};
+
+	// Kick off the init
+	$.init();

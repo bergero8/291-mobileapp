@@ -408,7 +408,8 @@ var APP = {
 			nodes.push({
 				id: i,
 				title: APP.Nodes[i].title,
-				image: UTIL.fileExists(imageFolder + APP.Nodes[i].image + ".png") ? imageFolder + APP.Nodes[i].image + ".png" : null,
+				//image: UTIL.fileExists(imageFolder + APP.Nodes[i].image + ".png") ? imageFolder + APP.Nodes[i].image + ".png" : null,
+				image: UTIL.fileExists(imageFolder + "tank.png") ? imageFolder + "tank.png" : null,
 				controller: APP.Nodes[i].type.toLowerCase(),
 				menuHeader: APP.Nodes[i].menuHeader
 			});
@@ -423,7 +424,8 @@ var APP = {
 			nodes.push({
 				id: "settings",
 				title: "Settings",
-				image: "/icons/white/settings.png",
+				//image: "/icons/white/settings.png",
+				image: "/icons/white/tank.png",
 				menuHeader: hasMenuHeaders ? "Application" : null
 			});
 
@@ -572,10 +574,18 @@ var APP = {
 	 * @param {Object} _event The event
 	 */
 	handleMenuClick: function(_event) {
-		if(typeof _event.row.id !== "undefined" && typeof _event.row.id == "number") {
-			APP.closeSettings();
 
-			APP.handleNavigation(_event.row.id);
+		if(typeof _event.row.id !== "undefined" && typeof _event.row.id == "number") {
+			alert(_event.row.id); ///////////////////////////////////////
+			//APP.closeSettings();
+			//APP.openSetup(); /////////////////////////////////////
+			if(_event.row.id == 1) {
+
+				APP.addChild("setup");
+
+			}
+			//APP.handleNavigation(_event.row.id);
+
 		} else if(typeof _event.row.id !== "undefined" && _event.row.id == "settings") {
 			APP.openSettings();
 		}
@@ -886,6 +896,24 @@ var APP = {
 			}
 		}
 	},
+	/*
+	 * Opens setup window
+	 * 
+	 * 
+	 * 
+	 */
+	/*openSetup: function() {
+		alert("Hello!"); ///////////////////////////
+		APP.log("debug", "APP.openSettup");
+
+		APP.addChild("setup", {}, true);
+	},
+	closeSetup: function() {
+		if(APP.modalStack.length > 0) {
+			APP.removeChild(true);
+		}
+	},*/
+	//////////////////////////////////////////////////////////
 	/**
 	 * Opens the Settings window
 	 */
