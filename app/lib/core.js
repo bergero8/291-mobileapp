@@ -574,22 +574,18 @@ var APP = {
 	 * @param {Object} _event The event
 	 */
 	handleMenuClick: function(_event) {
-		//if(typeof _event.row.id == "home") {
-		if(typeof _event.row.id !== "undefined" && typeof _event.row.id == 0) { //////////////
-			//if(typeof _event.row.id !== "undefined" && typeof _event.row.id == "number") {
+
+		if(typeof _event.row.id !== "undefined" && typeof _event.row.id == "number") {
 			alert(_event.row.id); ///////////////////////////////////////
 			//APP.closeSettings();
 			//APP.openSetup(); /////////////////////////////////////
+			if(_event.row.id == 1) {
 
+				APP.addChild("setup");
+
+			}
 			//APP.handleNavigation(_event.row.id);
 
-		} else if(typeof _event.row.id !== "undefined" && _event.row.id == 1) {
-			alert(_event.row.id); ///////////////////////////////////////
-			//APP.closeSettings();
-			//APP.openSetup(); /////////////////////////////////////
-
-			//APP.handleNavigation(_event.row.id);
-			///////////////////////////////////////////////////////////////////////////////////////////
 		} else if(typeof _event.row.id !== "undefined" && _event.row.id == "settings") {
 			APP.openSettings();
 		}
@@ -906,7 +902,8 @@ var APP = {
 	 * 
 	 * 
 	 */
-	openSetup: function() {
+	/*openSetup: function() {
+		alert("Hello!"); ///////////////////////////
 		APP.log("debug", "APP.openSettup");
 
 		APP.addChild("setup", {}, true);
@@ -915,7 +912,7 @@ var APP = {
 		if(APP.modalStack.length > 0) {
 			APP.removeChild(true);
 		}
-	},
+	},*/
 	//////////////////////////////////////////////////////////
 	/**
 	 * Opens the Settings window

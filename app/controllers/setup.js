@@ -1,10 +1,4 @@
-	/**$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$4444
-	 * All code pasted from settings.js
-	 * 
-	 * 
-	 * 
-	 * 
-	 * Controller for the settings screen
+	/**
 	 * 
 	 * @class Controllers.settings
 	 * @uses core

@@ -2,7 +2,30 @@
 	<View id="Wrapper" name="Setup">
 		<Require type="widget" src="com.mcongrove.navigationBar" id="NavigationBar" image="data/logo.png" />
 		
-		<ScrollView id="container">
+		<!--<ScrollView id="container">-->
+			<ScrollView id="container" backgroundColor="white" top="40" layout="vertical">
+				<TableView id="legal_table" height="120dp">
+					<TableViewRow id="goal" title="Financial Goal" >
+						 <TextField id="textField" hintText="Goal" color="#336699" width="300"  height="50" />
+  					</TableViewRow>
+					<TableViewRow id="cost" title="Total Cost" hasChild="true" />
+					<TableViewRow id="time" title="Time to achieve" hasChild="true" />
+				</TableView>
+				<View id="btnView" layout="horizontal" center="true">
+					<Button id="btnYear">Year</Button>
+					<Button id="btnMonth">Month</Button>
+					<Button id="btnWeek">Week</Button>
+				</View>
+			
+				<!--<TableView id="logs_table" height="90dp">
+					<TableViewRow id="logs" title="Send Application Logs" hasChild="true" />
+					<TableViewRow id="acknowledgements" title="Acknowledgements" hasChild="true" />
+			</TableView>-->
+			
+				<Label id="copyright" />
+				<Label id="version" />
+				<Label text="blah blah blah" />
+				<Label id="chariti" />
 			
 		<Button>HELP!!!</Button>
 		
