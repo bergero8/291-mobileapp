@@ -28,12 +28,12 @@
 	],
 	"tabs": [
 		{
-			"menuHeader": "My Tabs",
-			"title": "Text",
+			"menuHeader": "Master Control",
+			"title": "Home",
 			"heading": "Finance Platoon",
 			"text": "Welcome soldier! Ready to meet your financial goals? Check out slide-menu to left or click.......",
 			"type": "text",
-			"image": "chariti",
+			"image": "tank",
 			"tabletSupport": false
 		},
 		{
@@ -41,7 +41,7 @@
 			"heading": "This becomes CONFIG.heading in the text.js controller.",
 			"text": "This becomes CONFIG.text in the text.js controller.",
 			"type": "Click here to setup app",
-			"image": "chariti",
+			"image": "tank",
 			"tabletSupport": false
 		}
 	]

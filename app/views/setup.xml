@@ -1,14 +1,12 @@
 <Alloy>
-	<View class="container">
-		<TextField id="txtPassword" borderStyle="Ti.UI.INPUT_BORDERSTYLE_ROUNDED" color="#336699" top="10" left="10" width="250" height="60" />
-		<!--<TextField id="txtGoal" hintText: "Goal" borderStyle="Ti.UI.INPUT_BORDERSTYLE_ROUNDED" color="#336699" top="10" left="10" width="250" height="60" />
-		<TextField id="txtCost" hintText: "$$ needed to reach goal" borderStyle="Ti.UI.INPUT_BORDERSTYLE_ROUNDED" color="#336699" top="10" left="10" width="250" height="60" />
-		<Label id="label1" color="#900" shadowColor="#aaa" text="Enter amount of time to reach your goal in field below. Ex. 3 years
-			to save for vacation: Enter 3 and press Year button." textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER" width="Ti.UI.SIZE" height="Ti.UI.SIZE" />
-		<TextField id="txtTime" hintText: "Time" borderStyle="Ti.UI.INPUT_BORDERSTYLE_ROUNDED" color="#336699" top="10" left="10" width="250" height="60" />
-		<Button id="btnWeek" title="Week" width="10" height="10" />
-		<Button id="btnMonth" title="Month" width="10" height="10" />
-		<Button id="btnYear" title="Year" width="10" height="10" />-->
+	<View id="Wrapper" name="Setup">
+		<Require type="widget" src="com.mcongrove.navigationBar" id="NavigationBar" image="data/logo.png" />
+		
+		<ScrollView id="container">
+			
+		<Button>HELP!!!</Button>
+		
+		</ScrollView>
 	</View>
 </Alloy>
 
