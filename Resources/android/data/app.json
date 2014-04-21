@@ -1,0 +1,52 @@
+{
+	"id": "ChariTi.001",
+	"version": "1.2",
+	"minimumVersion": "1.2",
+	"configurationUrl": "",
+	"legal": {
+		"copyright": "Copyright ‌2013 ChariTi",
+		"terms": "http://www.appcelerator.com/legal/terms-conditions/",
+		"privacy": "https://policy-portal.truste.com/core/privacy-policy/ChariTi/04175946-6006-4c76-b174-6bc589432474"
+	},
+	"settings": {
+		"share": "Check out this great ChariTi content",
+		"notifications": {
+			"enabled": false,
+			"provider": "UA",
+			"key": "AuKi5Qn3QKGTno3xX9ECYA",
+			"secret": "s-RDQejhRwmx-j4DCaXPMw"
+		},
+		"colors": {
+
+			"primary": "#F5A9D0",
+
+			"primary": "#04B404",
+
+			"secondary": "#569BBE"
+		},
+		"useSlideMenu": true
+	},
+	"manifest": [
+		"http://chariti.mobi/app/logo.png",
+		"http://chariti.mobi/app/logo@2x.png"
+	],
+	"tabs": [
+		{
+			"menuHeader": "Master Control",
+			"title": "Home",
+			"heading": "Finance Platoon",
+			"text": "Welcome soldier! Ready to meet your financial goals? Check out slide-menu to left or click.......",
+			"type": "text",
+			"image": "tank",
+			"tabletSupport": false
+		},
+		{
+			"title": "Setup",
+			"heading": "This becomes CONFIG.heading in the text.js controller.",
+			"text": "This becomes CONFIG.text in the text.js controller.",
+			"type": "Click here to setup app",
+			"image": "tank",
+			"tabletSupport": false
+		}
+	]
+}

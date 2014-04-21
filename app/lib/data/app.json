@@ -17,11 +17,11 @@
 			"secret": "s-RDQejhRwmx-j4DCaXPMw"
 		},
 		"colors": {
-<<<<<<< HEAD
+
 			"primary": "#F5A9D0",
-=======
+
 			"primary": "#04B404",
->>>>>>> 5096260e07b59fb312091702380733723d8a2844
+
 			"secondary": "#569BBE"
 		},
 		"useSlideMenu": true
