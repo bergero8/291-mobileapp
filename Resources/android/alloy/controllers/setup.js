@@ -8,86 +8,112 @@ function Controller() {
     var exports = {};
     $.__views.Wrapper = Ti.UI.createView({
         id: "Wrapper",
-        layout: "vertical"
+        name: "Setup"
     });
     $.__views.Wrapper && $.addTopLevelView($.__views.Wrapper);
     $.__views.NavigationBar = Alloy.createWidget("com.mcongrove.navigationBar", "widget", {
         id: "NavigationBar",
-        image: "logo.png",
+        image: "data/logo.png",
         __parentSymbol: $.__views.Wrapper
     });
     $.__views.NavigationBar.setParent($.__views.Wrapper);
-    $.__views.txtName = Ti.UI.createTextField({
-        id: "txtName",
-        hintText: "Name",
-        borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+    $.__views.container = Ti.UI.createScrollView({
+        scrollsToTop: false,
+        id: "container",
+        backgroundColor: "white",
+        top: "40",
+        layout: "vertical"
+    });
+    $.__views.Wrapper.add($.__views.container);
+    var __alloyId10 = [];
+    $.__views.goal = Ti.UI.createTableViewRow({
+        id: "goal",
+        title: "Financial Goal"
+    });
+    __alloyId10.push($.__views.goal);
+    $.__views.textField = Ti.UI.createTextField({
+        id: "textField",
+        hintText: "Goal",
         color: "#336699",
-        top: "10",
-        left: "10",
-        width: "250",
-        height: "60"
+        width: "300",
+        height: "50"
     });
-    $.__views.Wrapper.add($.__views.txtName);
-    $.__views.txtPassword = Ti.UI.createTextField({
-        id: "txtPassword",
-        hintText: "Password",
-        borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
-        color: "#336699",
-        top: "10",
-        left: "10",
-        width: "250",
-        height: "60"
+    $.__views.goal.add($.__views.textField);
+    $.__views.cost = Ti.UI.createTableViewRow({
+        id: "cost",
+        title: "Total Cost",
+        hasChild: "true"
     });
-    $.__views.Wrapper.add($.__views.txtPassword);
-    $.__views.txtGoal1 = Ti.UI.createTextField({
-        id: "txtGoal1",
-        hintText: "First Goal",
-        borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
-        color: "#336699",
-        top: "10",
-        left: "10",
-        width: "250",
-        height: "60"
+    __alloyId10.push($.__views.cost);
+    $.__views.time = Ti.UI.createTableViewRow({
+        id: "time",
+        title: "Time to achieve",
+        hasChild: "true"
     });
-    $.__views.Wrapper.add($.__views.txtGoal1);
-    $.__views.txtGoal2 = Ti.UI.createTextField({
-        id: "txtGoal2",
-        hintText: "Second Goal",
-        borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
-        color: "#336699",
-        top: "10",
-        left: "10",
-        width: "250",
-        height: "60"
+    __alloyId10.push($.__views.time);
+    $.__views.legal_table = Ti.UI.createTableView({
+        scrollsToTop: false,
+        data: __alloyId10,
+        id: "legal_table",
+        height: "120dp"
     });
-    $.__views.Wrapper.add($.__views.txtGoal2);
-    $.__views.txtGoal3 = Ti.UI.createTextField({
-        id: "txtGoal3",
-        hintText: "Third Goal",
-        borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
-        color: "#336699",
-        top: "10",
-        left: "10",
-        width: "250",
-        height: "60"
+    $.__views.container.add($.__views.legal_table);
+    $.__views.btnView = Ti.UI.createView({
+        id: "btnView",
+        layout: "horizontal",
+        center: "true"
     });
-    $.__views.Wrapper.add($.__views.txtGoal3);
-    $.__views.btnSubmit = Ti.UI.createButton({
-        title: "Submit",
-        id: "btnSubmit"
+    $.__views.container.add($.__views.btnView);
+    $.__views.btnYear = Ti.UI.createButton({
+        title: "Year",
+        id: "btnYear"
     });
-    $.__views.Wrapper.add($.__views.btnSubmit);
+    $.__views.btnView.add($.__views.btnYear);
+    $.__views.btnMonth = Ti.UI.createButton({
+        title: "Month",
+        id: "btnMonth"
+    });
+    $.__views.btnView.add($.__views.btnMonth);
+    $.__views.btnWeek = Ti.UI.createButton({
+        title: "Week",
+        id: "btnWeek"
+    });
+    $.__views.btnView.add($.__views.btnWeek);
+    $.__views.copyright = Ti.UI.createLabel({
+        id: "copyright"
+    });
+    $.__views.container.add($.__views.copyright);
+    $.__views.version = Ti.UI.createLabel({
+        id: "version"
+    });
+    $.__views.container.add($.__views.version);
+    $.__views.__alloyId11 = Ti.UI.createLabel({
+        text: "blah blah blah",
+        id: "__alloyId11"
+    });
+    $.__views.container.add($.__views.__alloyId11);
+    $.__views.chariti = Ti.UI.createLabel({
+        id: "chariti"
+    });
+    $.__views.container.add($.__views.chariti);
+    $.__views.__alloyId12 = Ti.UI.createButton({
+        title: "HELP!!!",
+        id: "__alloyId12"
+    });
+    $.__views.container.add($.__views.__alloyId12);
     exports.destroy = function() {};
     _.extend($, $.__views);
     var APP = require("core");
-    arguments[0];
-    $.NavigationBar.setBackgroundColor(APP.Settings.colors.primary);
-    $.NavigationBar.showBack(function() {
-        APP.removeChild();
-    });
-    $.btnSubmit.addEventListener("click", function() {
-        APP.addChild("categories");
-    });
+    $.init = function() {
+        APP.log("debug", "setup.init");
+        $.NavigationBar.setBackgroundColor(APP.Settings.colors.primary);
+        APP.Settings.useSlideMenu ? $.NavigationBar.showMenu(function() {
+            APP.toggleMenu();
+        }) : $.NavigationBar.showBack(function() {
+            APP.removeChild(true);
+        });
+    };
+    $.init();
     _.extend($, exports);
 }
 
