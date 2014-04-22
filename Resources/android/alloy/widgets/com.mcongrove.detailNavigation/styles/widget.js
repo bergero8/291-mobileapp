@@ -34,7 +34,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0007,
+    priority: 100000.0002,
     key: "Wrapper",
     style: {
         width: "66dp",
@@ -43,7 +43,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0008,
+    priority: 100000.0003,
     key: "arrowUpWrapper",
     style: {
         width: "22dp",
@@ -53,7 +53,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0009,
+    priority: 100000.0004,
     key: "arrowUp",
     style: {
         width: "22dp",
@@ -64,7 +64,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.001,
+    priority: 100000.0005,
     key: "arrowDownWrapper",
     style: {
         width: "22dp",
@@ -74,7 +74,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0011,
+    priority: 100000.0006,
     key: "arrowDown",
     style: {
         width: "22dp",

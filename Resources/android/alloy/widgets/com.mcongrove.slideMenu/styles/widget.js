@@ -34,7 +34,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0028,
+    priority: 100000.0023,
     key: "Wrapper",
     style: {
         width: "200dp",
@@ -44,7 +44,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0029,
+    priority: 100000.0024,
     key: "Nodes",
     style: {
         top: "0dp",

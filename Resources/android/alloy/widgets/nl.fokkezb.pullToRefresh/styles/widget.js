@@ -34,14 +34,14 @@ module.exports = [ {
     }
 }, {
     isClass: true,
-    priority: 10000.0052,
+    priority: 10000.0047,
     key: "ptr",
     style: {
         backgroundColor: "#eeeeee"
     }
 }, {
     isClass: true,
-    priority: 10000.0053,
+    priority: 10000.0048,
     key: "ptrCenter",
     style: {
         bottom: 10,
@@ -50,7 +50,7 @@ module.exports = [ {
     }
 }, {
     isClass: true,
-    priority: 10000.0054,
+    priority: 10000.0049,
     key: "ptrArrow",
     style: {
         left: 8,
@@ -60,7 +60,7 @@ module.exports = [ {
     }
 }, {
     isClass: true,
-    priority: 10000.0055,
+    priority: 10000.005,
     key: "ptrIndicator",
     style: {
         left: 0,
@@ -68,7 +68,7 @@ module.exports = [ {
     }
 }, {
     isClass: true,
-    priority: 10000.0057,
+    priority: 10000.0052,
     key: "ptrText",
     style: {
         left: 30,

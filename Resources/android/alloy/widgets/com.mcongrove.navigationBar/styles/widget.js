@@ -34,7 +34,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0017,
+    priority: 100000.0012,
     key: "Wrapper",
     style: {
         top: "0dp",
@@ -45,7 +45,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0018,
+    priority: 100000.0013,
     key: "border",
     style: {
         bottom: "0dp",
@@ -56,7 +56,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0019,
+    priority: 100000.0014,
     key: "overlay",
     style: {
         height: Ti.UI.FILL,
@@ -66,7 +66,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.002,
+    priority: 100000.0015,
     key: "left",
     style: {
         top: "0dp",
@@ -76,7 +76,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0021,
+    priority: 100000.0016,
     key: "leftImage",
     style: {
         top: "9dp",
@@ -86,7 +86,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0022,
+    priority: 100000.0017,
     key: "back",
     style: {
         top: "0dp",
@@ -96,7 +96,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0023,
+    priority: 100000.0018,
     key: "backImage",
     style: {
         top: "9dp",
@@ -107,7 +107,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0024,
+    priority: 100000.0019,
     key: "next",
     style: {
         top: "0dp",
@@ -117,7 +117,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0025,
+    priority: 100000.002,
     key: "nextImage",
     style: {
         top: "9dp",
@@ -128,7 +128,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0026,
+    priority: 100000.0021,
     key: "right",
     style: {
         top: "0dp",
@@ -138,7 +138,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0027,
+    priority: 100000.0022,
     key: "rightImage",
     style: {
         top: "9dp",

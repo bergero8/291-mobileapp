@@ -34,7 +34,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.003,
+    priority: 100000.0025,
     key: "Wrapper",
     style: {
         height: "60dp",
@@ -42,7 +42,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0031,
+    priority: 100000.0026,
     key: "TabGroup",
     style: {
         height: "60dp",
@@ -51,7 +51,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0032,
+    priority: 100000.0027,
     key: "Border",
     style: {
         top: "0dp",
@@ -62,14 +62,14 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0033,
+    priority: 100000.0028,
     key: "IndicatorContainer",
     style: {
         height: "59dp"
     }
 }, {
     isId: true,
-    priority: 100000.0034,
+    priority: 100000.0029,
     key: "Indicator",
     style: {
         height: "59dp",
@@ -80,7 +80,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0035,
+    priority: 100000.003,
     key: "Overlay",
     style: {
         width: Ti.UI.FILL,
@@ -88,14 +88,14 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0036,
+    priority: 100000.0031,
     key: "TabContainer",
     style: {
         height: "60dp"
     }
 }, {
     isId: true,
-    priority: 100000.0037,
+    priority: 100000.0032,
     key: "Tabs",
     style: {
         layout: "horizontal",
@@ -104,7 +104,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0038,
+    priority: 100000.0033,
     key: "TabGroupMore",
     style: {
         height: Ti.UI.SIZE,
@@ -112,7 +112,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0039,
+    priority: 100000.0034,
     key: "IndicatorMore",
     style: {
         height: "60dp",
@@ -124,7 +124,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.004,
+    priority: 100000.0035,
     key: "TabContainerMore",
     style: {
         height: Ti.UI.SIZE,
@@ -132,7 +132,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0041,
+    priority: 100000.0036,
     key: "TabsMore",
     style: {
         layout: "vertical",

@@ -34,7 +34,7 @@ module.exports = [ {
     }
 }, {
     isClass: true,
-    priority: 10000.0045,
+    priority: 10000.004,
     key: "ptr",
     style: {
         width: Ti.UI.FILL,
@@ -43,7 +43,7 @@ module.exports = [ {
     }
 }, {
     isClass: true,
-    priority: 10000.0046,
+    priority: 10000.0041,
     key: "ptrCenter",
     style: {
         bottom: 11,
@@ -53,7 +53,7 @@ module.exports = [ {
     }
 }, {
     isClass: true,
-    priority: 10000.0047,
+    priority: 10000.0042,
     key: "ptrArrow",
     style: {
         left: 8,
@@ -63,7 +63,7 @@ module.exports = [ {
     }
 }, {
     isClass: true,
-    priority: 10000.0048,
+    priority: 10000.0043,
     key: "ptrIndicator",
     style: {
         left: 0,
@@ -71,7 +71,7 @@ module.exports = [ {
     }
 }, {
     isClass: true,
-    priority: 10000.005,
+    priority: 10000.0045,
     key: "ptrText",
     style: {
         left: 30,
@@ -83,7 +83,7 @@ module.exports = [ {
     }
 }, {
     isClass: true,
-    priority: 10000.0051,
+    priority: 10000.0046,
     key: "ptrLine",
     style: {
         bottom: 0,

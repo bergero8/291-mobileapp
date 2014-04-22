@@ -34,7 +34,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0012,
+    priority: 100000.0007,
     key: "Wrapper",
     style: {
         width: Ti.UI.FILL,
@@ -42,7 +42,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0013,
+    priority: 100000.0008,
     key: "Background",
     style: {
         backgroundColor: "#000",
@@ -52,7 +52,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0014,
+    priority: 100000.0009,
     key: "Modal",
     style: {
         width: "92dp",
@@ -62,7 +62,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0015,
+    priority: 100000.001,
     key: "Loading",
     style: {
         height: "33dp",
@@ -74,7 +74,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0016,
+    priority: 100000.0011,
     key: "Label",
     style: {
         top: "60dp",

@@ -34,7 +34,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0042,
+    priority: 100000.0037,
     key: "Wrapper",
     style: {
         width: Ti.UI.FILL,
@@ -43,7 +43,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0043,
+    priority: 100000.0038,
     key: "Modal",
     style: {
         top: "70dp",
@@ -54,7 +54,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0044,
+    priority: 100000.0039,
     key: "textLabel",
     style: {
         top: "0dp",
