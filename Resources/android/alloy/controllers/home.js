@@ -8,12 +8,8 @@ function Controller() {
     var exports = {};
     $.__views.Wrapper = Ti.UI.createView({
         id: "Wrapper",
-<<<<<<< HEAD
-        name: "Text"
-=======
         name: "Text",
         layout: "vertical"
->>>>>>> 6f9e830650f71bdd3467a4b07529f8ddc9a44f6f
     });
     $.__views.Wrapper && $.addTopLevelView($.__views.Wrapper);
     $.__views.NavigationBar = Alloy.createWidget("com.mcongrove.navigationBar", "widget", {
@@ -22,40 +18,20 @@ function Controller() {
         __parentSymbol: $.__views.Wrapper
     });
     $.__views.NavigationBar.setParent($.__views.Wrapper);
-<<<<<<< HEAD
-    $.__views.container = Ti.UI.createScrollView({
-        scrollsToTop: false,
-        id: "container"
-    });
-    $.__views.Wrapper.add($.__views.container);
-    $.__views.heading = Ti.UI.createLabel({
-        id: "heading"
-    });
-    $.__views.container.add($.__views.heading);
-=======
     $.__views.heading = Ti.UI.createLabel({
         id: "heading"
     });
     $.__views.Wrapper.add($.__views.heading);
->>>>>>> 6f9e830650f71bdd3467a4b07529f8ddc9a44f6f
     $.__views.image = Ti.UI.createImageView({
         id: "image",
         image: "/Army.png",
         width: "300dp"
     });
-<<<<<<< HEAD
-    $.__views.container.add($.__views.image);
-    $.__views.text = Ti.UI.createLabel({
-        id: "text"
-    });
-    $.__views.container.add($.__views.text);
-=======
     $.__views.Wrapper.add($.__views.image);
     $.__views.text = Ti.UI.createLabel({
         id: "text"
     });
     $.__views.Wrapper.add($.__views.text);
->>>>>>> 6f9e830650f71bdd3467a4b07529f8ddc9a44f6f
     exports.destroy = function() {};
     _.extend($, $.__views);
     var APP = require("core");
