@@ -1,12 +1,13 @@
 <Alloy>
-	<View id="Wrapper" name="Text">
+	<View id="Wrapper" name="Text" layout="vertical">
 		<Require type="widget" src="com.mcongrove.navigationBar" id="NavigationBar" image="data/logo.png" />
 
-		<ScrollView id="container">
+		<!--<ScrollView id="container" layout="vertical">-->
 			<Label id="heading" />
 			<ImageView id="image" image="/Army.png" width="300dp" />
 			<Label id="text" />
 
-		</ScrollView>
+	<!--</ScrollView>-->
 	</View>
 </Alloy>
+		

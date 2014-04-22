@@ -36,7 +36,7 @@
 			"title": "Home",
 			"heading": "Finance Platoon",
 			"text": "Welcome soldier! Ready to meet your financial goals? Check out slide-menu to left or click.......",
-			"type": "text",
+			"type": "home",
 			"image": "tank",
 			"tabletSupport": false
 		},

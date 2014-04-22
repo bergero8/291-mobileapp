@@ -576,7 +576,12 @@ var APP = {
 	handleMenuClick: function(_event) {
 
 		if(typeof _event.row.id !== "undefined" && typeof _event.row.id == "number") {
-			alert(_event.row.id); ///////////////////////////////////////
+			//alert(_event.row.id); ///////////////////////////////////////
+			/*if(_event.row.id == 0) {
+
+				APP.addChild("home");
+
+			}*/
 			//APP.closeSettings();
 			//APP.openSetup(); /////////////////////////////////////
 			if(_event.row.id == 1) {
