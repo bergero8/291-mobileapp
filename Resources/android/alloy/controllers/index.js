@@ -50,16 +50,13 @@ function Controller() {
     $.__views.Tabs.setParent($.__views.GlobalWrapper);
     exports.destroy = function() {};
     _.extend($, $.__views);
-    Alloy.Globals.swipeEnabled = false;
     var APP = require("core");
-    require("ti.cloud");
     APP.MainWindow = $.MainWindow;
     APP.GlobalWrapper = $.GlobalWrapper;
     APP.ContentWrapper = $.ContentWrapper;
     APP.Tabs = $.Tabs;
     APP.SlideMenu = $.SlideMenu;
     APP.init();
-    APP.addChild("home");
     _.extend($, exports);
 }
 

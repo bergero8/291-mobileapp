@@ -56,20 +56,6 @@ function Controller() {
     $.__views.container.add($.__views.text);
     exports.destroy = function() {};
     _.extend($, $.__views);
-    var APP = require("core");
-    var CONFIG = arguments[0];
-    APP.log("debug", "text | " + JSON.stringify(CONFIG));
-    $.heading.text = CONFIG.heading;
-    $.heading.color = APP.Settings.colors.hsb.primary.b > 70 ? "#000" : APP.Settings.colors.primary;
-    $.text.text = CONFIG.text;
-    $.NavigationBar.setBackgroundColor(APP.Settings.colors.primary);
-    true === CONFIG.isChild ? $.NavigationBar.showBack(function() {
-        APP.removeChild();
-    }) : APP.Settings.useSlideMenu ? $.NavigationBar.showMenu(function() {
-        APP.toggleMenu();
-    }) : $.NavigationBar.showSettings(function() {
-        APP.openSettings();
-    });
     _.extend($, exports);
 }
 
