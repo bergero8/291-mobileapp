@@ -237,10 +237,14 @@ var APP = {
         "undefined" != typeof _event.source.id && "number" == typeof _event.source.id && APP.handleNavigation(_event.source.id);
     },
     handleMenuClick: function(_event) {
+<<<<<<< HEAD
         if ("undefined" != typeof _event.row.id && "number" == typeof _event.row.id) {
             alert(_event.row.id);
             1 == _event.row.id && APP.addChild("setup");
         } else "undefined" != typeof _event.row.id && "settings" == _event.row.id && APP.openSettings();
+=======
+        "undefined" != typeof _event.row.id && "number" == typeof _event.row.id ? 1 == _event.row.id && APP.addChild("setup") : "undefined" != typeof _event.row.id && "settings" == _event.row.id && APP.openSettings();
+>>>>>>> 6f9e830650f71bdd3467a4b07529f8ddc9a44f6f
         APP.toggleMenu();
     },
     handleNavigation: function(_id) {
