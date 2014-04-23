@@ -591,6 +591,30 @@ var APP = {
 			}
 			//APP.handleNavigation(_event.row.id);
 
+			if(_event.row.id == 2) {
+
+				APP.addChild("ask the group");
+				APP.openGroup();
+
+			}
+			//APP.handleNavigation(_event.row.id);
+
+			if(_event.row.id == 3) {
+
+				APP.addChild("ask a friend");
+				APP.openAskaFriend();
+
+			}
+			//APP.handleNavigation(_event.row.id);
+
+			if(_event.row.id == 4) {
+
+				APP.addChild("progress");
+				APP.openProgress();
+
+			}
+			//APP.handleNavigation(_event.row.id);
+
 		} else if(typeof _event.row.id !== "undefined" && _event.row.id == "settings") {
 			APP.openSettings();
 		}
