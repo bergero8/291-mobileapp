@@ -1,0 +1,14 @@
+<Alloy>
+	<View id="Wrapper" name="Group">
+		<Require type="widget" src="com.mcongrove.navigationBar" id="NavigationBar" image="data/logo.png" />
+		
+		<!--<ScrollView id="container">-->
+			<ScrollView id="container" backgroundColor="white" top="40" layout="vertical">
+				
+		<Label>Group page</Label>
+		
+		</ScrollView>
+	</View>
+</Alloy>
+
+

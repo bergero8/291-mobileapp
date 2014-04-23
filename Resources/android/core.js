@@ -237,21 +237,7 @@ var APP = {
         "undefined" != typeof _event.source.id && "number" == typeof _event.source.id && APP.handleNavigation(_event.source.id);
     },
     handleMenuClick: function(_event) {
-        if ("undefined" != typeof _event.row.id && "number" == typeof _event.row.id) {
-            1 == _event.row.id && APP.addChild("setup");
-            if (2 == _event.row.id) {
-                APP.addChild("ask the group");
-                APP.openGroup();
-            }
-            if (3 == _event.row.id) {
-                APP.addChild("ask a friend");
-                APP.openAskaFriend();
-            }
-            if (4 == _event.row.id) {
-                APP.addChild("progress");
-                APP.openProgress();
-            }
-        } else "undefined" != typeof _event.row.id && "settings" == _event.row.id && APP.openSettings();
+        "undefined" != typeof _event.row.id && "number" == typeof _event.row.id ? APP.handleNavigation(_event.row.id) : "undefined" != typeof _event.row.id && "settings" == _event.row.id && APP.openSettings();
         APP.toggleMenu();
     },
     handleNavigation: function(_id) {

@@ -25,12 +25,12 @@ function Controller() {
         layout: "vertical"
     });
     $.__views.Wrapper.add($.__views.container);
-    var __alloyId10 = [];
+    var __alloyId12 = [];
     $.__views.goal = Ti.UI.createTableViewRow({
         id: "goal",
         title: "Financial Goal"
     });
-    __alloyId10.push($.__views.goal);
+    __alloyId12.push($.__views.goal);
     $.__views.textField = Ti.UI.createTextField({
         id: "textField",
         hintText: "Goal",
@@ -44,16 +44,16 @@ function Controller() {
         title: "Total Cost",
         hasChild: "true"
     });
-    __alloyId10.push($.__views.cost);
+    __alloyId12.push($.__views.cost);
     $.__views.time = Ti.UI.createTableViewRow({
         id: "time",
         title: "Time to achieve",
         hasChild: "true"
     });
-    __alloyId10.push($.__views.time);
+    __alloyId12.push($.__views.time);
     $.__views.legal_table = Ti.UI.createTableView({
         scrollsToTop: false,
-        data: __alloyId10,
+        data: __alloyId12,
         id: "legal_table",
         height: "120dp"
     });
@@ -87,20 +87,20 @@ function Controller() {
         id: "version"
     });
     $.__views.container.add($.__views.version);
-    $.__views.__alloyId11 = Ti.UI.createLabel({
+    $.__views.__alloyId13 = Ti.UI.createLabel({
         text: "blah blah blah",
-        id: "__alloyId11"
+        id: "__alloyId13"
     });
-    $.__views.container.add($.__views.__alloyId11);
+    $.__views.container.add($.__views.__alloyId13);
     $.__views.chariti = Ti.UI.createLabel({
         id: "chariti"
     });
     $.__views.container.add($.__views.chariti);
-    $.__views.__alloyId12 = Ti.UI.createButton({
+    $.__views.__alloyId14 = Ti.UI.createButton({
         title: "HELP!!!",
-        id: "__alloyId12"
+        id: "__alloyId14"
     });
-    $.__views.container.add($.__views.__alloyId12);
+    $.__views.container.add($.__views.__alloyId14);
     exports.destroy = function() {};
     _.extend($, $.__views);
     var APP = require("core");

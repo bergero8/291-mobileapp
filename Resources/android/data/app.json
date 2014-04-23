@@ -44,7 +44,7 @@
 			"title": "Setup",
 			"heading": "This becomes CONFIG.heading in the text.js controller.",
 			"text": "This becomes CONFIG.text in the text.js controller.",
-			"type": "Click here to setup app",
+			"type": "setup",
 			"image": "tank",
 			"tabletSupport": false
 		},
@@ -52,15 +52,7 @@
 			"title": "Ask the Group",
 			"heading": "This becomes CONFIG.heading in the text.js controller.",
 			"text": "This becomes CONFIG.text in the text.js controller.",
-			"type": "Click here to chat with friends",
-			"image": "tank",
-			"tabletSupport": false
-		},
-		{
-			"title": "Ask a Friend",
-			"heading": "This becomes CONFIG.heading in the text.js controller.",
-			"text": "This becomes CONFIG.text in the text.js controller.",
-			"type": "Click here to chat with a friend",
+			"type": "group",
 			"image": "tank",
 			"tabletSupport": false
 		},
@@ -68,7 +60,7 @@
 			"title": "Progress Check",
 			"heading": "This becomes CONFIG.heading in the text.js controller.",
 			"text": "This becomes CONFIG.text in the text.js controller.",
-			"type": "Click here to check progress",
+			"type": "progress",
 			"image": "tank",
 			"tabletSupport": false
 		}
