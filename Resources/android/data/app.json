@@ -49,7 +49,7 @@
 			"tabletSupport": false
 		},
 		{
-			"title": "Ask the Group",
+			"title": "Contact Platoon",
 			"heading": "This becomes CONFIG.heading in the text.js controller.",
 			"text": "This becomes CONFIG.text in the text.js controller.",
 			"type": "group",

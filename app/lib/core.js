@@ -578,7 +578,6 @@ var APP = {
 		if(typeof _event.row.id !== "undefined" && typeof _event.row.id == "number") {
 
 			//APP.closeSettings();
-			//APP.openSetup(); /////////////////////////////////////
 
 			APP.handleNavigation(_event.row.id);
 
