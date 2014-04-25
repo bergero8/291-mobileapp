@@ -31,14 +31,14 @@ function Controller() {
         title: "Financial Goal"
     });
     __alloyId12.push($.__views.goal);
-    $.__views.textField = Ti.UI.createTextField({
-        id: "textField",
+    $.__views.txtGoal = Ti.UI.createTextField({
+        id: "txtGoal",
         hintText: "Goal",
-        color: "#336699",
-        width: "300",
-        height: "50"
+        width: "100%",
+        height: "20",
+        hasChile: "true"
     });
-    $.__views.goal.add($.__views.textField);
+    $.__views.goal.add($.__views.txtGoal);
     $.__views.cost = Ti.UI.createTableViewRow({
         id: "cost",
         title: "Total Cost",
@@ -79,6 +79,29 @@ function Controller() {
         id: "btnWeek"
     });
     $.__views.btnView.add($.__views.btnWeek);
+    $.__views.__alloyId13 = Ti.UI.createLabel({
+        text: "Setup new platoon",
+        id: "__alloyId13"
+    });
+    $.__views.btnView.add($.__views.__alloyId13);
+    $.__views.platoonSwitch = Ti.UI.createSwitch({
+        value: false,
+        id: "platoonSwitch"
+    });
+    $.__views.btnView.add($.__views.platoonSwitch);
+    $.__views.txtPlatoon = Ti.UI.createTextField({
+        id: "txtPlatoon",
+        hintText: "Platoon Name",
+        color: "#336699",
+        width: "300",
+        height: "50"
+    });
+    $.__views.btnView.add($.__views.txtPlatoon);
+    $.__views.btnPlatoon = Ti.UI.createButton({
+        title: "Create",
+        id: "btnPlatoon"
+    });
+    $.__views.btnView.add($.__views.btnPlatoon);
     $.__views.copyright = Ti.UI.createLabel({
         id: "copyright"
     });
@@ -87,23 +110,24 @@ function Controller() {
         id: "version"
     });
     $.__views.container.add($.__views.version);
-    $.__views.__alloyId13 = Ti.UI.createLabel({
+    $.__views.__alloyId14 = Ti.UI.createLabel({
         text: "blah blah blah",
-        id: "__alloyId13"
+        id: "__alloyId14"
     });
-    $.__views.container.add($.__views.__alloyId13);
+    $.__views.container.add($.__views.__alloyId14);
     $.__views.chariti = Ti.UI.createLabel({
         id: "chariti"
     });
     $.__views.container.add($.__views.chariti);
-    $.__views.__alloyId14 = Ti.UI.createButton({
+    $.__views.__alloyId15 = Ti.UI.createButton({
         title: "HELP!!!",
-        id: "__alloyId14"
+        id: "__alloyId15"
     });
-    $.__views.container.add($.__views.__alloyId14);
+    $.__views.container.add($.__views.__alloyId15);
     exports.destroy = function() {};
     _.extend($, $.__views);
     var APP = require("core");
+    var count = 0;
     $.init = function() {
         APP.log("debug", "setup.init");
         $.NavigationBar.setBackgroundColor(APP.Settings.colors.primary);
@@ -111,6 +135,23 @@ function Controller() {
             APP.toggleMenu();
         }) : $.NavigationBar.showBack(function() {
             APP.removeChild(true);
+        });
+        alert($.goal.getSize);
+        $.txtPlatoon.setVisible(false);
+        $.btnPlatoon.setVisible(false);
+        $.txtPlatoon.setEditable(false);
+        $.platoonSwitch.addEventListener("click", function() {
+            count++;
+            var mod = count % 2;
+            if (0 != mod) {
+                $.txtPlatoon.setVisible(true);
+                $.btnPlatoon.setVisible(true);
+                $.txtPlatoon.setEditable(true);
+            } else {
+                $.txtPlatoon.setVisible(false);
+                $.btnPlatoon.setVisible(false);
+                $.txtPlatoon.setEditable(false);
+            }
         });
     };
     $.init();
