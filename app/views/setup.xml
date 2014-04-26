@@ -1,63 +1,22 @@
 <Alloy>
-	<View id="Wrapper" name="Setup">
-		<Require type="widget" src="com.mcongrove.navigationBar" id="NavigationBar" image="data/logo.png" />
+		<View id="Wrapper" name="Setup" backgroundColor="white" backgroundImage="/ArmyBW.gif" layout="vertical">
+			<Require type="widget" src="com.mcongrove.navigationBar" id="NavigationBar" image="data/logo.png" />
 		
-		<!--<ScrollView id="container">-->
-			<ScrollView id="container" backgroundColor="white" top="40" layout="vertical">
-				<TableView id="legal_table" height="120dp">
-					<TableViewRow id="goal" title="Financial Goal" >
-						 <!--<TextField id="txtGoal" hintText="Goal" color="#336699" width="300"  height="50" />-->
-						 <!--<TextField id="txtGoal" hintText="Goal" width="100%" height="20" hasChile="true"/>-->
-  					</TableViewRow>
-					<TableViewRow id="cost" title="Total Cost" hasChild="true" />
-					<TableViewRow id="time" title="Time to achieve" hasChild="true" />
-				</TableView>
-				<View id="btnView" layout="horizontal" center="true">
-					<Button id="btnYear">Year</Button>
-					<Button id="btnMonth">Month</Button>
-					<Button id="btnWeek">Week</Button>
-					<Label>Setup new platoon</Label>
-					<!--<Switch id="platoonSwitch" value="false" onChange="outputState"/>-->
-					<Switch id="platoonSwitch" value="false" />
-					<TextField id="txtPlatoon" hintText="Platoon Name" color="#336699" width="300"  height="50" />
-  					<Button id="btnPlatoon">Create</Button>
-					
+				<TextField id="txtUser" hintText="Soldier Name(User name)" color="#336699" width="300"  height="50" />
+				<TextField id="txtPass" hintText="Password" color="#336699" width="300"  height="50" />
+				<TextField id="txtGoal" hintText="Goal" color="#336699" width="300"  height="50" />
+				<TextField id="txtCost" hintText="Cost" color="#336699" width="300"  height="50" />
+				
+				<View id="btnView" layout="horizontal" height="50dp" layout="horizontal" left="10dp">
+					<TextField id="txtTime" hintText="Time" color="#336699" width="75"  height="50" />
+					<Button id="btnYear" onClick="timeSelectionY">Year</Button>
+					<Button id="btnMonth" onClick="timeSelectionM">Month</Button>
+					<Button id="btnWeek" onClick="timeSelectionW">Week</Button>
 				</View>
-			
-				<!--<TableView id="logs_table" height="90dp">
-					<TableViewRow id="logs" title="Send Application Logs" hasChild="true" />
-					<TableViewRow id="acknowledgements" title="Acknowledgements" hasChild="true" />
-			</TableView>-->
-			
-				<Label id="copyright" />
-				<Label id="version" />
-				<Label text="blah blah blah" />
-				<Label id="chariti" />
-			
-		<Button>HELP!!!</Button>
-		
-		</ScrollView>
-	</View>
+				<Label color="black">Setup new platoon</Label>
+				<Switch id="platoonSwitch" value="false" />
+				<TextField id="txtPlatoon" hintText="Platoon Name" color="#336699" width="300"  height="50" />
+				<TextField id="txtDrillSerg" hintText="Want to set up Drill Sergeant?" color="#336699" width="300"  height="50" />
+  				<Button id="btnSubmit">Submit</Button>
+		</View>
 </Alloy>
-
-<!--
-	<View id="Wrapper" name="Settings">
-		<Require type="widget" src="com.mcongrove.navigationBar" id="NavigationBar" image="data/logo.png" />
-		
-		<ScrollView id="container">
-			<TableView id="legal_table" height="90dp">
-				<TableViewRow id="terms" title="Terms of Service" hasChild="true" />
-				<TableViewRow id="privacy" title="Privacy Policy" hasChild="true" />
-			</TableView>
-			
-			<TableView id="logs_table" height="90dp">
-				<TableViewRow id="logs" title="Send Application Logs" hasChild="true" />
-				<TableViewRow id="acknowledgements" title="Acknowledgements" hasChild="true" />
-			</TableView>
-			
-			<Label id="copyright" />
-			<Label id="version" />
-			<Label text="This application was created using the open source ChariTi framework, freely available at:\nhttp://chariti.mobi" />
-			<Label id="chariti" />
-		</ScrollView>
-	</View>-->

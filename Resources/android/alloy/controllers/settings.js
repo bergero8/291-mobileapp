@@ -128,6 +128,21 @@ function Controller() {
         id: "copyright"
     });
     $.__views.container.add($.__views.copyright);
+    $.__views.__alloyId5 = Ti.UI.createLabel({
+        color: "#666",
+        font: {
+            fontSize: "14dp",
+            fontFamily: "HelveticaNeue"
+        },
+        top: "5dp",
+        left: "15dp",
+        right: "15dp",
+        height: Ti.UI.SIZE,
+        textAlign: "left",
+        text: "This app is an academic exercise. Any copyright infringement or issues are the sole responsibility of Meghan! I am innocent!",
+        id: "__alloyId5"
+    });
+    $.__views.container.add($.__views.__alloyId5);
     $.__views.version = Ti.UI.createLabel({
         color: "#666",
         font: {
@@ -142,7 +157,7 @@ function Controller() {
         id: "version"
     });
     $.__views.container.add($.__views.version);
-    $.__views.__alloyId5 = Ti.UI.createLabel({
+    $.__views.__alloyId6 = Ti.UI.createLabel({
         color: "#666",
         font: {
             fontSize: "14dp",
@@ -154,9 +169,9 @@ function Controller() {
         height: Ti.UI.SIZE,
         textAlign: "left",
         text: "This application was created using the open source ChariTi framework, freely available at:\nhttp://chariti.mobi",
-        id: "__alloyId5"
+        id: "__alloyId6"
     });
-    $.__views.container.add($.__views.__alloyId5);
+    $.__views.container.add($.__views.__alloyId6);
     $.__views.chariti = Ti.UI.createLabel({
         color: "#666",
         font: {

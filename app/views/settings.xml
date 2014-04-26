@@ -14,6 +14,7 @@
 			</TableView>
 			
 			<Label id="copyright" />
+			<Label text="This app is an academic exercise. Any copyright infringement or issues are the sole responsibility of Meghan! I am innocent!"></Label>
 			<Label id="version" />
 			<Label text="This application was created using the open source ChariTi framework, freely available at:\nhttp://chariti.mobi" />
 			<Label id="chariti" />

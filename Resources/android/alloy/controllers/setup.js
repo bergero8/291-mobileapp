@@ -1,4 +1,16 @@
 function Controller() {
+    function timeSelectionY() {
+        goalTime = "Year";
+        alert($.txtTime.value + " " + goalTime);
+    }
+    function timeSelectionM() {
+        goalTime = "Month";
+        alert($.txtTime.value + " " + goalTime);
+    }
+    function timeSelectionW() {
+        goalTime = "Week";
+        alert($.txtTime.value + " " + goalTime);
+    }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "setup";
     arguments[0] ? arguments[0]["__parentSymbol"] : null;
@@ -6,9 +18,13 @@ function Controller() {
     arguments[0] ? arguments[0]["__itemTemplate"] : null;
     var $ = this;
     var exports = {};
+    var __defers = {};
     $.__views.Wrapper = Ti.UI.createView({
         id: "Wrapper",
-        name: "Setup"
+        name: "Setup",
+        backgroundColor: "white",
+        backgroundImage: "/ArmyBW.gif",
+        layout: "vertical"
     });
     $.__views.Wrapper && $.addTopLevelView($.__views.Wrapper);
     $.__views.NavigationBar = Alloy.createWidget("com.mcongrove.navigationBar", "widget", {
@@ -17,78 +33,82 @@ function Controller() {
         __parentSymbol: $.__views.Wrapper
     });
     $.__views.NavigationBar.setParent($.__views.Wrapper);
-    $.__views.container = Ti.UI.createScrollView({
-        scrollsToTop: false,
-        id: "container",
-        backgroundColor: "white",
-        top: "40",
-        layout: "vertical"
+    $.__views.txtUser = Ti.UI.createTextField({
+        id: "txtUser",
+        hintText: "Soldier Name(User name)",
+        color: "#336699",
+        width: "300",
+        height: "50"
     });
-    $.__views.Wrapper.add($.__views.container);
-    var __alloyId12 = [];
-    $.__views.goal = Ti.UI.createTableViewRow({
-        id: "goal",
-        title: "Financial Goal"
+    $.__views.Wrapper.add($.__views.txtUser);
+    $.__views.txtPass = Ti.UI.createTextField({
+        id: "txtPass",
+        hintText: "Password",
+        color: "#336699",
+        width: "300",
+        height: "50"
     });
-    __alloyId12.push($.__views.goal);
+    $.__views.Wrapper.add($.__views.txtPass);
     $.__views.txtGoal = Ti.UI.createTextField({
         id: "txtGoal",
         hintText: "Goal",
-        width: "100%",
-        height: "20",
-        hasChile: "true"
+        color: "#336699",
+        width: "300",
+        height: "50"
     });
-    $.__views.goal.add($.__views.txtGoal);
-    $.__views.cost = Ti.UI.createTableViewRow({
-        id: "cost",
-        title: "Total Cost",
-        hasChild: "true"
+    $.__views.Wrapper.add($.__views.txtGoal);
+    $.__views.txtCost = Ti.UI.createTextField({
+        id: "txtCost",
+        hintText: "Cost",
+        color: "#336699",
+        width: "300",
+        height: "50"
     });
-    __alloyId12.push($.__views.cost);
-    $.__views.time = Ti.UI.createTableViewRow({
-        id: "time",
-        title: "Time to achieve",
-        hasChild: "true"
-    });
-    __alloyId12.push($.__views.time);
-    $.__views.legal_table = Ti.UI.createTableView({
-        scrollsToTop: false,
-        data: __alloyId12,
-        id: "legal_table",
-        height: "120dp"
-    });
-    $.__views.container.add($.__views.legal_table);
+    $.__views.Wrapper.add($.__views.txtCost);
     $.__views.btnView = Ti.UI.createView({
         id: "btnView",
         layout: "horizontal",
-        center: "true"
+        height: "50dp",
+        left: "10dp"
     });
-    $.__views.container.add($.__views.btnView);
+    $.__views.Wrapper.add($.__views.btnView);
+    $.__views.txtTime = Ti.UI.createTextField({
+        id: "txtTime",
+        hintText: "Time",
+        color: "#336699",
+        width: "75",
+        height: "50"
+    });
+    $.__views.btnView.add($.__views.txtTime);
     $.__views.btnYear = Ti.UI.createButton({
         title: "Year",
         id: "btnYear"
     });
     $.__views.btnView.add($.__views.btnYear);
+    timeSelectionY ? $.__views.btnYear.addEventListener("click", timeSelectionY) : __defers["$.__views.btnYear!click!timeSelectionY"] = true;
     $.__views.btnMonth = Ti.UI.createButton({
         title: "Month",
         id: "btnMonth"
     });
     $.__views.btnView.add($.__views.btnMonth);
+    timeSelectionM ? $.__views.btnMonth.addEventListener("click", timeSelectionM) : __defers["$.__views.btnMonth!click!timeSelectionM"] = true;
     $.__views.btnWeek = Ti.UI.createButton({
         title: "Week",
         id: "btnWeek"
     });
     $.__views.btnView.add($.__views.btnWeek);
+    timeSelectionW ? $.__views.btnWeek.addEventListener("click", timeSelectionW) : __defers["$.__views.btnWeek!click!timeSelectionW"] = true;
     $.__views.__alloyId13 = Ti.UI.createLabel({
         text: "Setup new platoon",
+        color: "black",
         id: "__alloyId13"
     });
-    $.__views.btnView.add($.__views.__alloyId13);
+    $.__views.Wrapper.add($.__views.__alloyId13);
     $.__views.platoonSwitch = Ti.UI.createSwitch({
         value: false,
         id: "platoonSwitch"
     });
-    $.__views.btnView.add($.__views.platoonSwitch);
+    $.__views.Wrapper.add($.__views.platoonSwitch);
     $.__views.txtPlatoon = Ti.UI.createTextField({
         id: "txtPlatoon",
         hintText: "Platoon Name",
@@ -96,38 +116,25 @@ function Controller() {
         width: "300",
         height: "50"
     });
-    $.__views.btnView.add($.__views.txtPlatoon);
-    $.__views.btnPlatoon = Ti.UI.createButton({
-        title: "Create",
-        id: "btnPlatoon"
+    $.__views.Wrapper.add($.__views.txtPlatoon);
+    $.__views.txtDrillSerg = Ti.UI.createTextField({
+        id: "txtDrillSerg",
+        hintText: "Want to set up Drill Sergeant?",
+        color: "#336699",
+        width: "300",
+        height: "50"
     });
-    $.__views.btnView.add($.__views.btnPlatoon);
-    $.__views.copyright = Ti.UI.createLabel({
-        id: "copyright"
+    $.__views.Wrapper.add($.__views.txtDrillSerg);
+    $.__views.btnSubmit = Ti.UI.createButton({
+        title: "Submit",
+        id: "btnSubmit"
     });
-    $.__views.container.add($.__views.copyright);
-    $.__views.version = Ti.UI.createLabel({
-        id: "version"
-    });
-    $.__views.container.add($.__views.version);
-    $.__views.__alloyId14 = Ti.UI.createLabel({
-        text: "blah blah blah",
-        id: "__alloyId14"
-    });
-    $.__views.container.add($.__views.__alloyId14);
-    $.__views.chariti = Ti.UI.createLabel({
-        id: "chariti"
-    });
-    $.__views.container.add($.__views.chariti);
-    $.__views.__alloyId15 = Ti.UI.createButton({
-        title: "HELP!!!",
-        id: "__alloyId15"
-    });
-    $.__views.container.add($.__views.__alloyId15);
+    $.__views.Wrapper.add($.__views.btnSubmit);
     exports.destroy = function() {};
     _.extend($, $.__views);
     var APP = require("core");
     var count = 0;
+    var goalTime;
     $.init = function() {
         APP.log("debug", "setup.init");
         $.NavigationBar.setBackgroundColor(APP.Settings.colors.primary);
@@ -136,25 +143,47 @@ function Controller() {
         }) : $.NavigationBar.showBack(function() {
             APP.removeChild(true);
         });
-        alert($.goal.getSize);
         $.txtPlatoon.setVisible(false);
-        $.btnPlatoon.setVisible(false);
         $.txtPlatoon.setEditable(false);
+        $.txtDrillSerg.setVisible(false);
         $.platoonSwitch.addEventListener("click", function() {
             count++;
             var mod = count % 2;
             if (0 != mod) {
                 $.txtPlatoon.setVisible(true);
-                $.btnPlatoon.setVisible(true);
                 $.txtPlatoon.setEditable(true);
+                $.txtDrillSerg.setVisible(true);
+                $.txtDrillSerg.setEditable(true);
             } else {
                 $.txtPlatoon.setVisible(false);
-                $.btnPlatoon.setVisible(false);
                 $.txtPlatoon.setEditable(false);
+                $.txtDrillSerg.setVisible(false);
+                $.txtDrillSerg.setEditable(false);
             }
         });
+        $.btnSubmit.addEventListener("click", function() {
+            Cloud.Users.create({
+                username: $.txtUser.value,
+                password: $.txtPass.value,
+                password_confirmation: $.txtPass.value,
+                goal: $.txtGoal.value,
+                cost: $.txtCost.value,
+                time: $.txtTime.value + " " + goalTime
+            }, function(e) {
+                if (e.success) {
+                    var user = e.users[0];
+                    alert("Success:\nid: " + user.id + "\n" + "sessionId: " + Cloud.sessionId + "\n");
+                    var index = Alloy.createController("index").getView();
+                    index.open();
+                } else alert("Error:\n" + (e.error && e.message || JSON.stringify(e)));
+            });
+        });
     };
+    alert($.txtTime.value + " " + goalTime);
     $.init();
+    __defers["$.__views.btnYear!click!timeSelectionY"] && $.__views.btnYear.addEventListener("click", timeSelectionY);
+    __defers["$.__views.btnMonth!click!timeSelectionM"] && $.__views.btnMonth.addEventListener("click", timeSelectionM);
+    __defers["$.__views.btnWeek!click!timeSelectionW"] && $.__views.btnWeek.addEventListener("click", timeSelectionW);
     _.extend($, exports);
 }
 

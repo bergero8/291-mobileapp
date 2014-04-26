@@ -5,6 +5,8 @@
 	 */
 	var APP = require("core");
 	var count = 0;
+	var goalTime;
+	var friendCount = 0;
 
 	/**
 	 * Initializes the controller
@@ -23,41 +25,97 @@
 				APP.removeChild(true);
 			});
 		}
-		alert($.goal.getSize); /////////////
-		//$.goal.add($.txtGoal);
+
 		$.txtPlatoon.setVisible(false);
-		$.btnPlatoon.setVisible(false);
 		$.txtPlatoon.setEditable(false);
+		$.txtDrillSerg.setVisible(false);
 
 		$.platoonSwitch.addEventListener('click', function() {
 			count++;
 			var mod = count % 2;
 			if(mod != 0) {
-				//if($.platoonSwitch.getValue) {
 				$.txtPlatoon.setVisible(true);
-				$.btnPlatoon.setVisible(true);
 				$.txtPlatoon.setEditable(true);
+				$.txtDrillSerg.setVisible(true);
+				$.txtDrillSerg.setEditable(true);
 			} else {
 				$.txtPlatoon.setVisible(false);
-				$.btnPlatoon.setVisible(false);
 				$.txtPlatoon.setEditable(false);
-			}
+				$.txtDrillSerg.setVisible(false);
+				$.txtDrillSerg.setEditable(false);
 
+			}
+			/*
+			 * create Platoon (group; custom object)
+			 */
+	
+			Cloud.Objects.create({
+    			Platoon: $.txtPlatoon.value,
+    			fields: {
+        			soldiers: $.txtUser.value,
+        			drillSergeant: $.txtDrillSerg.value
+       		}
+			}, function (e) {
+    			if (e.success) {
+        			var car = e.cars[0];
+        			alert('Success:\n' +
+            		'id: ' + Platoon.id + '\n' +
+            		'Soldiers: ' + Platoon.soldiers + '\n' +
+            		'DrillSergeant: ' + Platoon.drillSergeant + '\n' +
+            		'created_at: ' + Platoon.created_at);
+    		} else {
+        		alert('Error:\n' +
+            		((e.error && e.message) || JSON.stringify(e)));
+    		}
+			});
 		});
+
+		//TODO:create user, group.....
+		$.btnSubmit.addEventListener('click', function() {
+			Cloud.Users.create({
+				username: $.txtUser.value,
+				password: $.txtPass.value,
+				password_confirmation: $.txtPass.value,
+				goal: $.txtGoal.value,
+				cost: $.txtCost.value,
+				time: $.txtTime.value + " " + goalTime
+			}, function(e) {
+				if(e.success) {
+					var user = e.users[0];
+					alert('Success:\n' +
+						'id: ' + user.id + '\n' +
+						'sessionId: ' + Cloud.sessionId + '\n');
+					var index = Alloy.createController('index').getView();
+					index.open();
+
+				} else {
+					alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
+				}
+			});
+		});
+
+		/*$.btnLogin.addEventListener('click', function() {
+			var login = Alloy.createController('login').getView();
+			login.open();
+		});*/
+
 	};
 
-	/*function outputState() {
-		//Ti.API.info('Switch value: ' + $.basicSwitch.value)
-		if($.platoonSwitch.getValue) {
-			$.txtPlatoon.setVisible(true);
-			$.btnPlatoon.setVisible(true);
-			$.txtPlatoon.setEditable(true);
-		} else {
-			$.txtPlatoon.setVisible(false);
-			$.btnPlatoon.setVisible(false);
-			$.txtPlatoon.setEditable(false);
-		}
-	}*/
+	function timeSelectionY() {
+		goalTime = 'Year';
+		alert($.txtTime.value + " " + goalTime);
+	}
 
+	function timeSelectionM() {
+		goalTime = 'Month';
+		alert($.txtTime.value + " " + goalTime);
+	}
+
+	function timeSelectionW() {
+		goalTime = 'Week';
+		alert($.txtTime.value + " " + goalTime);
+
+	}
+	
 	// Kick off the init
 	$.init();

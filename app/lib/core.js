@@ -490,6 +490,13 @@ var APP = {
 				}
 			}
 		});
+		/*
+		 * slide menu click handler
+		 */
+		/*APP.GlobalWrapper.addEventListener("click", function(_event) {
+			alert(APP.GlobalWrapper.)
+			APP.openMenu();
+		});*/
 	},
 	/**
 	 * Re-builds the app with newly downloaded JSON configration file
