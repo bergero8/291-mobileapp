@@ -45,29 +45,7 @@
 				$.txtDrillSerg.setEditable(false);
 
 			}
-			/*
-			 * create Platoon (group; custom object)
-			 */
-	
-			Cloud.Objects.create({
-    			Platoon: $.txtPlatoon.value,
-    			fields: {
-        			soldiers: $.txtUser.value,
-        			drillSergeant: $.txtDrillSerg.value
-       		}
-			}, function (e) {
-    			if (e.success) {
-        			var car = e.cars[0];
-        			alert('Success:\n' +
-            		'id: ' + Platoon.id + '\n' +
-            		'Soldiers: ' + Platoon.soldiers + '\n' +
-            		'DrillSergeant: ' + Platoon.drillSergeant + '\n' +
-            		'created_at: ' + Platoon.created_at);
-    		} else {
-        		alert('Error:\n' +
-            		((e.error && e.message) || JSON.stringify(e)));
-    		}
-			});
+
 		});
 
 		//TODO:create user, group.....
@@ -88,6 +66,30 @@
 					var index = Alloy.createController('index').getView();
 					index.open();
 
+				} else {
+					alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
+				}
+			});
+		});
+
+		/*
+		 * create Platoon (group; custom object)
+		 */
+		$.btnPlatoonSubmit.addEventListener('click', function() {
+			Cloud.Objects.create({
+				Platoon: $.txtPlatoon.value,
+				fields: {
+					soldiers: $.txtUser.value,
+					drillSergeant: $.txtDrillSerg.value
+				}
+			}, function(e) {
+				if(e.success) {
+					var car = e.cars[0];
+					alert('Success:\n' +
+						'id: ' + Platoon.id + '\n' +
+						'Soldiers: ' + Platoon.soldiers + '\n' +
+						'DrillSergeant: ' + Platoon.drillSergeant + '\n' +
+						'created_at: ' + Platoon.created_at);
 				} else {
 					alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
 				}
@@ -116,6 +118,6 @@
 		alert($.txtTime.value + " " + goalTime);
 
 	}
-	
+
 	// Kick off the init
 	$.init();

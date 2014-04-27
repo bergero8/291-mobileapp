@@ -98,6 +98,11 @@ function Controller() {
     });
     $.__views.btnView.add($.__views.btnWeek);
     timeSelectionW ? $.__views.btnWeek.addEventListener("click", timeSelectionW) : __defers["$.__views.btnWeek!click!timeSelectionW"] = true;
+    $.__views.btnSubmit = Ti.UI.createButton({
+        title: "Create User",
+        id: "btnSubmit"
+    });
+    $.__views.Wrapper.add($.__views.btnSubmit);
     $.__views.__alloyId13 = Ti.UI.createLabel({
         text: "Setup new platoon",
         color: "black",
@@ -125,11 +130,11 @@ function Controller() {
         height: "50"
     });
     $.__views.Wrapper.add($.__views.txtDrillSerg);
-    $.__views.btnSubmit = Ti.UI.createButton({
-        title: "Submit",
-        id: "btnSubmit"
+    $.__views.btnPlatoonSubmit = Ti.UI.createButton({
+        title: "Create Platoon",
+        id: "btnPlatoonSubmit"
     });
-    $.__views.Wrapper.add($.__views.btnSubmit);
+    $.__views.Wrapper.add($.__views.btnPlatoonSubmit);
     exports.destroy = function() {};
     _.extend($, $.__views);
     var APP = require("core");
@@ -178,8 +183,21 @@ function Controller() {
                 } else alert("Error:\n" + (e.error && e.message || JSON.stringify(e)));
             });
         });
+        $.btnPlatoonSubmit.addEventListener("click", function() {
+            Cloud.Objects.create({
+                Platoon: $.txtPlatoon.value,
+                fields: {
+                    soldiers: $.txtUser.value,
+                    drillSergeant: $.txtDrillSerg.value
+                }
+            }, function(e) {
+                if (e.success) {
+                    e.cars[0];
+                    alert("Success:\nid: " + Platoon.id + "\n" + "Soldiers: " + Platoon.soldiers + "\n" + "DrillSergeant: " + Platoon.drillSergeant + "\n" + "created_at: " + Platoon.created_at);
+                } else alert("Error:\n" + (e.error && e.message || JSON.stringify(e)));
+            });
+        });
     };
-    alert($.txtTime.value + " " + goalTime);
     $.init();
     __defers["$.__views.btnYear!click!timeSelectionY"] && $.__views.btnYear.addEventListener("click", timeSelectionY);
     __defers["$.__views.btnMonth!click!timeSelectionM"] && $.__views.btnMonth.addEventListener("click", timeSelectionM);

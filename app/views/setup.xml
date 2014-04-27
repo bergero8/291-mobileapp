@@ -13,10 +13,11 @@
 					<Button id="btnMonth" onClick="timeSelectionM">Month</Button>
 					<Button id="btnWeek" onClick="timeSelectionW">Week</Button>
 				</View>
+				<Button id="btnSubmit">Create User</Button>
 				<Label color="black">Setup new platoon</Label>
 				<Switch id="platoonSwitch" value="false" />
 				<TextField id="txtPlatoon" hintText="Platoon Name" color="#336699" width="300"  height="50" />
 				<TextField id="txtDrillSerg" hintText="Want to set up Drill Sergeant?" color="#336699" width="300"  height="50" />
-  				<Button id="btnSubmit">Submit</Button>
+  				<Button id="btnPlatoonSubmit">Create Platoon</Button>
 		</View>
 </Alloy>
