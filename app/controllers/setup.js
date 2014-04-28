@@ -4,6 +4,7 @@
 	 * @uses core
 	 */
 	var APP = require("core");
+	var Cloud = require('ti.cloud');
 	var count = 0;
 	var goalTime;
 	var friendCount = 0;
@@ -118,6 +119,25 @@
 		alert($.txtTime.value + " " + goalTime);
 
 	}
+
+	$.btnLogin.addEventListener('click', function() {
+		Cloud.Users.login({
+			login: $.txtUser.value,
+			password: $.txtPass.value
+		}, function(e) {
+			if(e.success) {
+				var user = e.users[0];
+				alert('Success:\n' +
+					'id: ' + user.id + '\n' +
+					'sessionId: ' + Cloud.sessionId + '\n' +
+					'first name: ' + user.first_name + '\n' +
+					'last name: ' + user.last_name);
+			} else {
+				alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
+			}
+		});
+
+	});
 
 	// Kick off the init
 	$.init();

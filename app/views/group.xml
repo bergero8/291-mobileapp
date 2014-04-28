@@ -6,6 +6,10 @@
 			<ScrollView id="container" backgroundColor="white" top="40" layout="vertical">
 				
 		<Label>Group page</Label>
+		<TextField id="txtFriend" hintText="Time" color="#336699" width="75"  height="50" />
+					<Button id="btnFriend">Add Friend</Button>
+					
+					<Button id="btnFindFriend">Find Friend</Button>
 		
 		</ScrollView>
 	</View>

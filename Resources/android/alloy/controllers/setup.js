@@ -135,9 +135,15 @@ function Controller() {
         id: "btnPlatoonSubmit"
     });
     $.__views.Wrapper.add($.__views.btnPlatoonSubmit);
+    $.__views.btnLogin = Ti.UI.createButton({
+        title: "Login",
+        id: "btnLogin"
+    });
+    $.__views.Wrapper.add($.__views.btnLogin);
     exports.destroy = function() {};
     _.extend($, $.__views);
     var APP = require("core");
+    var Cloud = require("ti.cloud");
     var count = 0;
     var goalTime;
     $.init = function() {
@@ -198,6 +204,17 @@ function Controller() {
             });
         });
     };
+    $.btnLogin.addEventListener("click", function() {
+        Cloud.Users.login({
+            login: $.txtUser.value,
+            password: $.txtPass.value
+        }, function(e) {
+            if (e.success) {
+                var user = e.users[0];
+                alert("Success:\nid: " + user.id + "\n" + "sessionId: " + Cloud.sessionId + "\n" + "first name: " + user.first_name + "\n" + "last name: " + user.last_name);
+            } else alert("Error:\n" + (e.error && e.message || JSON.stringify(e)));
+        });
+    });
     $.init();
     __defers["$.__views.btnYear!click!timeSelectionY"] && $.__views.btnYear.addEventListener("click", timeSelectionY);
     __defers["$.__views.btnMonth!click!timeSelectionM"] && $.__views.btnMonth.addEventListener("click", timeSelectionM);

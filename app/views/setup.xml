@@ -19,5 +19,7 @@
 				<TextField id="txtPlatoon" hintText="Platoon Name" color="#336699" width="300"  height="50" />
 				<TextField id="txtDrillSerg" hintText="Want to set up Drill Sergeant?" color="#336699" width="300"  height="50" />
   				<Button id="btnPlatoonSubmit">Create Platoon</Button>
+  				
+  				<Button id="btnLogin">Login</Button>
 		</View>
 </Alloy>
