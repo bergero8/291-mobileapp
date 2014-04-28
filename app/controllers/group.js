@@ -28,7 +28,7 @@
 	$.btnFriend.addEventListener('click', function() {
 		Cloud.Friends.add({
 			//user_ids: checked.join(",")
-			user_ids: $.txtFriend.id
+			user_ids: 
 		}, function(e) {
 			if(e.success) {
 				alert('Friend(s) added');
