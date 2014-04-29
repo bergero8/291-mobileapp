@@ -6,13 +6,11 @@
 			<ScrollView id="container" backgroundColor="white" top="40" layout="vertical">
 				
 		<Label>Group page</Label>
-		<TextField id="txtFriend" hintText="Time" color="#336699" width="75"  height="50" />
-					<Button id="btnFriend">Add Friend</Button>
-					
-					<Button id="btnFindFriend">Find Friend</Button>
+		<TextField id="txtFindFriend" width="300dp">Enter Friend first name</TextField>
+		<Button id="btnFriend">Press</Button>
+		<TableView id="userTable"/>
 		
 		</ScrollView>
 	</View>
 </Alloy>
-
 
