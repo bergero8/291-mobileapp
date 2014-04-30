@@ -6,8 +6,9 @@
 			<Label id="heading" />
 			<ImageView id="image" image="/Army.png" width="300dp" />
 			<Label id="text" />
-
+			<TextField id="txtUser" hintText="Enter user name" width="300dp"></TextField>
+			<TextField id="txtPass" hintText="Enter password" width="300dp"></TextField>
+			<Button id="btnLogin">Login</Button>
 	</ScrollView>
 	</View>
 </Alloy>
-		

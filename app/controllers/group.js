@@ -23,17 +23,40 @@
 				APP.removeChild(true);
 			});
 		}
+		/*
+		 * Show groups
+		 */
+		Cloud.Objects.show({
+			classname: 'Platoon',
+
+		}, function(e) {
+			if(e.success) {
+				alert('Success:\n' +
+					'Count: ' + e.Platoon.length);
+				for(var i = 0; i < e.Platoon.length; i++) {
+					var Platoon = e.Platoon[i];
+					alert('Name: ' + Platoon.name);
+				}
+			} else {
+				alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
+			}
+		});
 	};
 
 	$.btnFriend.addEventListener('click', function() {
+		var first = $.txtUserFirst.value;
+		var last = $.txtUserLast.value;
+
 		Cloud.Users.query({
 			page: 1,
 			per_page: 10,
-			where: {
-				//username: 'testfriend2'
-				first_name: $.txtFindFriend.value
 
+			where: {
+
+				first_name: $.txtUserFirst.value,
+				//last_name: $.txtUserLast.value
 			}
+
 		}, function(e) {
 			if(e.success) {
 				var rows = [];

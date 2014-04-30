@@ -5,6 +5,7 @@
  * @uses core
  */
 var APP = require("core");
+var Cloud = require("ti.cloud");
 
 var CONFIG = arguments[0];
 
@@ -32,3 +33,25 @@ if(CONFIG.isChild === true) {
 		});
 	}
 }
+
+$.btnLogin.addEventListener('click', function() {
+	Cloud.Users.login({
+		login: $.txtUser.value,
+		password: $.txtPass.value
+	}, function(e) {
+		if(e.success) {
+			var user = e.users[0];
+			alert('Success:\n' +
+				'id: ' + user.id + '\n' +
+				'sessionId: ' + Cloud.sessionId + '\n' +
+				'first name: ' + user.first_name + '\n' +
+				'last name: ' + user.last_name);
+			$.txtUser.setVisible(false);
+			$.txtPass.setVisible(false);
+			$.btnLogin.setVisible(false);
+		} else {
+			alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
+		}
+	});
+
+});

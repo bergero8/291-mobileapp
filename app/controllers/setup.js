@@ -78,29 +78,26 @@
 		 */
 		$.btnPlatoonSubmit.addEventListener('click', function() {
 			Cloud.Objects.create({
-				Platoon: $.txtPlatoon.value,
+				classname: 'Platoon',
 				fields: {
-					soldiers: $.txtUser.value,
+					name: $.txtPlatoon.value,
+					owner: $.txtUser.value,
 					drillSergeant: $.txtDrillSerg.value
 				}
 			}, function(e) {
 				if(e.success) {
-					var car = e.cars[0];
+					var Platoon = e.Platoon[0];
 					alert('Success:\n' +
 						'id: ' + Platoon.id + '\n' +
-						'Soldiers: ' + Platoon.soldiers + '\n' +
+						'Name: ' + Platoon.name + '\n' +
 						'DrillSergeant: ' + Platoon.drillSergeant + '\n' +
-						'created_at: ' + Platoon.created_at);
+						'created_at: ' + Platoon.created_at + '\n' +
+						'owner: ' + Platoon.owner);
 				} else {
 					alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
 				}
 			});
 		});
-
-		/*$.btnLogin.addEventListener('click', function() {
-			var login = Alloy.createController('login').getView();
-			login.open();
-		});*/
 
 	};
 
@@ -119,25 +116,6 @@
 		alert($.txtTime.value + " " + goalTime);
 
 	}
-
-	$.btnLogin.addEventListener('click', function() {
-		Cloud.Users.login({
-			login: $.txtUser.value,
-			password: $.txtPass.value
-		}, function(e) {
-			if(e.success) {
-				var user = e.users[0];
-				alert('Success:\n' +
-					'id: ' + user.id + '\n' +
-					'sessionId: ' + Cloud.sessionId + '\n' +
-					'first name: ' + user.first_name + '\n' +
-					'last name: ' + user.last_name);
-			} else {
-				alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
-			}
-		});
-
-	});
 
 	// Kick off the init
 	$.init();

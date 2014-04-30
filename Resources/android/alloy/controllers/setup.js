@@ -19,7 +19,8 @@ function Controller() {
     var $ = this;
     var exports = {};
     var __defers = {};
-    $.__views.Wrapper = Ti.UI.createView({
+    $.__views.Wrapper = Ti.UI.createScrollView({
+        scrollsToTop: false,
         id: "Wrapper",
         name: "Setup",
         backgroundColor: "white",
@@ -135,11 +136,6 @@ function Controller() {
         id: "btnPlatoonSubmit"
     });
     $.__views.Wrapper.add($.__views.btnPlatoonSubmit);
-    $.__views.btnLogin = Ti.UI.createButton({
-        title: "Login",
-        id: "btnLogin"
-    });
-    $.__views.Wrapper.add($.__views.btnLogin);
     exports.destroy = function() {};
     _.extend($, $.__views);
     var APP = require("core");
@@ -191,30 +187,20 @@ function Controller() {
         });
         $.btnPlatoonSubmit.addEventListener("click", function() {
             Cloud.Objects.create({
-                Platoon: $.txtPlatoon.value,
+                classname: "Platoon",
                 fields: {
-                    soldiers: $.txtUser.value,
+                    name: $.txtPlatoon.value,
+                    owner: $.txtUser.value,
                     drillSergeant: $.txtDrillSerg.value
                 }
             }, function(e) {
                 if (e.success) {
-                    e.cars[0];
-                    alert("Success:\nid: " + Platoon.id + "\n" + "Soldiers: " + Platoon.soldiers + "\n" + "DrillSergeant: " + Platoon.drillSergeant + "\n" + "created_at: " + Platoon.created_at);
+                    var Platoon = e.Platoon[0];
+                    alert("Success:\nid: " + Platoon.id + "\n" + "Name: " + Platoon.name + "\n" + "DrillSergeant: " + Platoon.drillSergeant + "\n" + "created_at: " + Platoon.created_at + "\n" + "owner: " + Platoon.owner);
                 } else alert("Error:\n" + (e.error && e.message || JSON.stringify(e)));
             });
         });
     };
-    $.btnLogin.addEventListener("click", function() {
-        Cloud.Users.login({
-            login: $.txtUser.value,
-            password: $.txtPass.value
-        }, function(e) {
-            if (e.success) {
-                var user = e.users[0];
-                alert("Success:\nid: " + user.id + "\n" + "sessionId: " + Cloud.sessionId + "\n" + "first name: " + user.first_name + "\n" + "last name: " + user.last_name);
-            } else alert("Error:\n" + (e.error && e.message || JSON.stringify(e)));
-        });
-    });
     $.init();
     __defers["$.__views.btnYear!click!timeSelectionY"] && $.__views.btnYear.addEventListener("click", timeSelectionY);
     __defers["$.__views.btnMonth!click!timeSelectionM"] && $.__views.btnMonth.addEventListener("click", timeSelectionM);

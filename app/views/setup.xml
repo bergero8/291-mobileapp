@@ -1,5 +1,6 @@
 <Alloy>
-		<View id="Wrapper" name="Setup" backgroundColor="white" backgroundImage="/ArmyBW.gif" layout="vertical">
+	<ScrollView id="Wrapper" name="Setup" backgroundColor="white" backgroundImage="/ArmyBW.gif" layout="vertical">
+		<!--<View id="Wrapper" name="Setup" backgroundColor="white" backgroundImage="/ArmyBW.gif" layout="vertical">-->
 			<Require type="widget" src="com.mcongrove.navigationBar" id="NavigationBar" image="data/logo.png" />
 		
 				<TextField id="txtUser" hintText="Soldier Name(User name)" color="#336699" width="300"  height="50" />
@@ -20,6 +21,7 @@
 				<TextField id="txtDrillSerg" hintText="Want to set up Drill Sergeant?" color="#336699" width="300"  height="50" />
   				<Button id="btnPlatoonSubmit">Create Platoon</Button>
   				
-  				<Button id="btnLogin">Login</Button>
-		</View>
+  				
+		<!--</View>-->
+		</ScrollView>
 </Alloy>

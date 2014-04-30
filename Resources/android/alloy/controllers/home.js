@@ -60,9 +60,27 @@ function Controller() {
         id: "text"
     });
     $.__views.container.add($.__views.text);
+    $.__views.txtUser = Ti.UI.createTextField({
+        id: "txtUser",
+        hintText: "Enter user name",
+        width: "300dp"
+    });
+    $.__views.container.add($.__views.txtUser);
+    $.__views.txtPass = Ti.UI.createTextField({
+        id: "txtPass",
+        hintText: "Enter password",
+        width: "300dp"
+    });
+    $.__views.container.add($.__views.txtPass);
+    $.__views.btnLogin = Ti.UI.createButton({
+        title: "Login",
+        id: "btnLogin"
+    });
+    $.__views.container.add($.__views.btnLogin);
     exports.destroy = function() {};
     _.extend($, $.__views);
     var APP = require("core");
+    var Cloud = require("ti.cloud");
     var CONFIG = arguments[0];
     APP.log("debug", "text | " + JSON.stringify(CONFIG));
     $.heading.text = CONFIG.heading;
@@ -75,6 +93,20 @@ function Controller() {
         APP.toggleMenu();
     }) : $.NavigationBar.showSettings(function() {
         APP.openSettings();
+    });
+    $.btnLogin.addEventListener("click", function() {
+        Cloud.Users.login({
+            login: $.txtUser.value,
+            password: $.txtPass.value
+        }, function(e) {
+            if (e.success) {
+                var user = e.users[0];
+                alert("Success:\nid: " + user.id + "\n" + "sessionId: " + Cloud.sessionId + "\n" + "first name: " + user.first_name + "\n" + "last name: " + user.last_name);
+                $.txtUser.setVisible(false);
+                $.txtPass.setVisible(false);
+                $.btnLogin.setVisible(false);
+            } else alert("Error:\n" + (e.error && e.message || JSON.stringify(e)));
+        });
     });
     _.extend($, exports);
 }

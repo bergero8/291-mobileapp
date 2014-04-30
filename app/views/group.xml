@@ -5,8 +5,9 @@
 		<!--<ScrollView id="container">-->
 			<ScrollView id="container" backgroundColor="white" top="40" layout="vertical">
 				
-		<Label>Group page</Label>
-		<TextField id="txtFindFriend" width="300dp">Enter Friend first name</TextField>
+		<Label>Contact Platoon</Label>
+		<TextField id="txtUserFirst" width="300dp">Enter Friend first name</TextField>
+		<TextField id="txtUserLast" width="300dp">Enter Friend last name</TextField>
 		<Button id="btnFriend">Press</Button>
 		<TableView id="userTable"/>
 		
