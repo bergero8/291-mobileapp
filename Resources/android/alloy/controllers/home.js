@@ -69,6 +69,7 @@ function Controller() {
     $.__views.txtPass = Ti.UI.createTextField({
         id: "txtPass",
         hintText: "Enter password",
+        passwordMask: "true",
         width: "300dp"
     });
     $.__views.container.add($.__views.txtPass);

@@ -37,7 +37,7 @@ function Controller() {
     $.__views.txtUser = Ti.UI.createTextField({
         id: "txtUser",
         hintText: "Soldier Name(User name)",
-        color: "#336699",
+        backgroundColor: "Transparent",
         width: "300",
         height: "50"
     });
@@ -45,7 +45,7 @@ function Controller() {
     $.__views.txtPass = Ti.UI.createTextField({
         id: "txtPass",
         hintText: "Password",
-        color: "#336699",
+        passwordMask: "true",
         width: "300",
         height: "50"
     });
@@ -53,7 +53,7 @@ function Controller() {
     $.__views.txtGoal = Ti.UI.createTextField({
         id: "txtGoal",
         hintText: "Goal",
-        color: "#336699",
+        backgroundColor: "#E6E6E6",
         width: "300",
         height: "50"
     });
@@ -70,7 +70,7 @@ function Controller() {
         id: "btnView",
         layout: "horizontal",
         height: "50dp",
-        left: "10dp"
+        left: "29dp"
     });
     $.__views.Wrapper.add($.__views.btnView);
     $.__views.txtTime = Ti.UI.createTextField({
@@ -101,7 +101,9 @@ function Controller() {
     timeSelectionW ? $.__views.btnWeek.addEventListener("click", timeSelectionW) : __defers["$.__views.btnWeek!click!timeSelectionW"] = true;
     $.__views.btnSubmit = Ti.UI.createButton({
         title: "Create User",
-        id: "btnSubmit"
+        id: "btnSubmit",
+        backgroundColor: "Transparent",
+        borderColor: "black"
     });
     $.__views.Wrapper.add($.__views.btnSubmit);
     $.__views.__alloyId13 = Ti.UI.createLabel({
