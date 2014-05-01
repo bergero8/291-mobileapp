@@ -1,17 +1,21 @@
 <Alloy>
-	<View id="Wrapper" name="Group">
+	<ScrollView id="Wrapper" name="Platoon" backgroundColor="white" backgroundImage="/ArmyBW.gif" layout="vertical">
+	<!--<View id="Wrapper" name="Group">-->
 		<Require type="widget" src="com.mcongrove.navigationBar" id="NavigationBar" image="data/logo.png" />
 		
 		<!--<ScrollView id="container">-->
-			<ScrollView id="container" backgroundColor="white" top="40" layout="vertical">
+			<!--<ScrollView id="container" backgroundColor="white" top="40" layout="vertical">-->
 				
 		<Label>Contact Platoon</Label>
+		
 		<TextField id="txtUserFirst" width="300dp">Enter Friend first name</TextField>
 		<TextField id="txtUserLast" width="300dp">Enter Friend last name</TextField>
-		<Button id="btnFriend">Press</Button>
+		<Button id="btnFriend">Soldier Lookup</Button>
 		<TableView id="userTable"/>
+		<Label id="grpLabel">click user, then new window shows platoons, click platoon, added message</Label>
+		<TableView id="groupTable"/>
 		
 		</ScrollView>
-	</View>
+	<!--</View>-->
 </Alloy>
 
