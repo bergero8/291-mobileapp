@@ -78,9 +78,10 @@
 	 * Pick user from table
 	 */
 	$.userTable.addEventListener('click', function(e) {
-		var friendSelect = e.row.name;
-		APP.addChild("groupSelect");
+		
+		APP.addChild("groupSelect", e.row.name);
 
 	});
+
 	// Kick off the init
 	$.init();

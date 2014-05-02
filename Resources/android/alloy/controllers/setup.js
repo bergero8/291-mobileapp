@@ -177,7 +177,8 @@ function Controller() {
                 password_confirmation: $.txtPass.value,
                 goal: $.txtGoal.value,
                 cost: $.txtCost.value,
-                time: $.txtTime.value + " " + goalTime
+                time: $.txtTime.value + " " + goalTime,
+                platoon: null
             }, function(e) {
                 if (e.success) {
                     var user = e.users[0];

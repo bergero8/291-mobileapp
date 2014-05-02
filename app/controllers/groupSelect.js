@@ -5,6 +5,8 @@
 	 */
 	var APP = require("core");
 	var Cloud = require("ti.cloud");
+	var groupPass = require("group");
+	var args = arguments[0] || {};
 
 	/**
 	 * Initializes the controller
@@ -63,6 +65,17 @@
 		} else {
 			alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
 		}
+	});
+
+	/*
+	 * Event listener to select a platton to assing a user too
+	 */
+	$.groupTable.addEventListener('click', function(e) {
+
+		var groupSelected = e.row.name;
+		//var friend = groupPass.getFriend();
+		alert(args);
+
 	});
 
 	$.init();
