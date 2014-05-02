@@ -75,46 +75,12 @@
 	});
 
 	/*
-	 * Show groups
+	 * Pick user from table
 	 */
-	var showPlatoons = Cloud.Objects.query({
-		classname: 'Platoon',
-		page: 1,
-		per_page: 10,
-		/*where: {
-        color: 'blue'
-    }*/
-	}, function(e) {
-		if(e.success) {
-			var rows = [];
+	$.userTable.addEventListener('click', function(e) {
+		var friendSelect = e.row.name;
+		APP.addChild("groupSelect");
 
-			for(var i = 0; i < e.Platoon.length; i++) {
-				var plat = e.Platoon[i];
-				var row = Ti.UI.createTableViewRow({
-					layout: "vertical",
-					hasChild: true,
-					name: plat.name,
-
-				});
-				var title = Ti.UI.createLabel({
-					text: plat.name,
-					font: {
-						fontFamily: "bold",
-						fontSize: "20dp",
-						fontColor: "black"
-					},
-					left: "10dp"
-				});
-
-				row.add(title);
-				rows.push(row);
-			}
-
-			$.groupTable.setData(rows);
-		} else {
-			alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
-		}
 	});
-
 	// Kick off the init
 	$.init();

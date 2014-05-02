@@ -106,12 +106,12 @@ function Controller() {
         borderColor: "black"
     });
     $.__views.Wrapper.add($.__views.btnSubmit);
-    $.__views.__alloyId13 = Ti.UI.createLabel({
+    $.__views.__alloyId14 = Ti.UI.createLabel({
         text: "Setup new platoon",
         color: "black",
-        id: "__alloyId13"
+        id: "__alloyId14"
     });
-    $.__views.Wrapper.add($.__views.__alloyId13);
+    $.__views.Wrapper.add($.__views.__alloyId14);
     $.__views.platoonSwitch = Ti.UI.createSwitch({
         value: false,
         id: "platoonSwitch"

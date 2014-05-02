@@ -6,6 +6,9 @@
 			<ScrollView id="container" backgroundColor="white" top="40" layout="vertical">
 				
 			
+			<Button id="btnAnimate">Press me</Button>
+			
+			<ImageView id="convoyImageView" image="/ArmyHum.jpg" top="160" left="30dp"></ImageView>
 		<Label>Progress check</Label>
 		</ScrollView>
 	</View>

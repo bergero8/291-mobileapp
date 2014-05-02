@@ -13,7 +13,7 @@
 		<Button id="btnFriend">Soldier Lookup</Button>
 		<TableView id="userTable"/>
 		<Label id="grpLabel">click user, then new window shows platoons, click platoon, added message</Label>
-		<TableView id="groupTable"/>
+		
 		
 		</ScrollView>
 	<!--</View>-->

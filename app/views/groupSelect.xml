@@ -1,0 +1,11 @@
+<Alloy>
+	<ScrollView id="Wrapper" name="Platoon" backgroundColor="white" layout="vertical">
+		<Require type="widget" src="com.mcongrove.navigationBar" id="NavigationBar" image="data/logo.png" />
+		<TableView id="groupTable" height="100dp"/>
+	
+		<!--<View id="cartoonView">-->
+			<ImageView image="/ArmyPlatoon.gif"></ImageView>
+		<!--</View>-->
+		
+	</ScrollView>
+</Alloy>
