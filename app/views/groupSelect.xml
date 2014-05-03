@@ -6,6 +6,7 @@
 	
 		<!--<View id="cartoonView">-->
 			<ImageView image="/ArmyPlatoon.gif"></ImageView>
+		
 		<!--</View>-->
 		
 	</ScrollView>

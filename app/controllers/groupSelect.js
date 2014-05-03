@@ -6,7 +6,8 @@
 	var APP = require("core");
 	var Cloud = require("ti.cloud");
 	var args = arguments[0] || {};
-
+	//var CONFIG = arguments[0];
+	var CONFIG = true;
 	/**
 	 * Initializes the controller
 	 */
@@ -14,6 +15,10 @@
 		APP.log("debug", "Group.init");
 
 		$.NavigationBar.setBackgroundColor(APP.Settings.colors.primary);
+
+		/*$.NavigationBar.showBack(function(_event) {
+			APP.removeChild(true);
+		});
 
 		if(APP.Settings.useSlideMenu) {
 			$.NavigationBar.showMenu(function(_event) {
@@ -23,6 +28,22 @@
 			$.NavigationBar.showBack(function(_event) {
 				APP.removeChild(true);
 			});
+		}*/
+		if(CONFIG === true) {
+			$.NavigationBar.showBack(function(_event) {
+				APP.removeChild();
+			});
+		} else {
+			if(APP.Settings.useSlideMenu) {
+				$.NavigationBar.showMenu(function(_event) {
+					APP.toggleMenu();
+				});
+			} else {
+				$.NavigationBar.showSettings(function(_event) {
+
+					APP.openSettings();
+				});
+			}
 		}
 
 	};
@@ -47,7 +68,7 @@
 					id: plat.id,
 
 				});
-				alert(plat.id); ///////////
+
 				var title = Ti.UI.createLabel({
 					text: plat.name,
 					font: {
@@ -75,7 +96,7 @@
 
 		var groupSelected = e.row.name;
 		var groupID = e.row.id;
-		alert(groupID);
+
 		var dialog = Ti.UI.createAlertDialog({
 			confirm: 0,
 			cancel: 1,
@@ -107,7 +128,7 @@
 					}
 				});*/
 				Cloud.Objects.update({
-					classname: 'platoon',
+					classname: 'Platoon',
 					id: groupID,
 					fields: {
 						soldiers: args
@@ -117,6 +138,7 @@
 					if(e.success) {
 						//var car = e.cars[0];
 						alert("it did something");
+						APP.removeChild(); ///////////////
 					} else {
 						alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
 					}
