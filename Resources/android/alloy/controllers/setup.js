@@ -197,7 +197,6 @@ function Controller() {
                     goal: $.txtGoal.value,
                     cost: $.txtCost.value,
                     time: $.txtTime.value + " " + goalTime,
-                    platoon: "noEntry",
                     savings: "noEntry"
                 }
             }, function(e) {
@@ -215,7 +214,8 @@ function Controller() {
                 fields: {
                     name: $.txtPlatoon.value,
                     owner: $.txtUser.value,
-                    drillSergeant: $.txtDrillSerg.value
+                    drillSergeant: $.txtDrillSerg.value,
+                    soldiers: []
                 }
             }, function(e) {
                 if (e.success) {

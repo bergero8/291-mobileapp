@@ -44,8 +44,10 @@
 					layout: "vertical",
 					hasChild: true,
 					name: plat.name,
+					id: plat.id,
 
 				});
+				alert(plat.id); ///////////
 				var title = Ti.UI.createLabel({
 					text: plat.name,
 					font: {
@@ -72,7 +74,8 @@
 	$.groupTable.addEventListener('click', function(e) {
 
 		var groupSelected = e.row.name;
-
+		var groupID = e.row.id;
+		alert(groupID);
 		var dialog = Ti.UI.createAlertDialog({
 			confirm: 0,
 			cancel: 1,
@@ -88,9 +91,9 @@
 				 * update user with platoon selection
 				 */
 
-				var userUpdate = Cloud.Users.update({//!!!!!!!!!!!!!!!!!!!!!!!!!
-					custom_fields: {				//this updates the main user not the user searched
-													// for and clicked on(which is what we want)
+				/*var userUpdate = Cloud.Users.update({ //!!!!!!!!!!!!!!!!!!!!!!!!!
+					custom_fields: { //this updates the main user not the user searched
+						// for and clicked on(which is what we want)
 						platoon: groupSelected
 
 					}
@@ -99,6 +102,21 @@
 					if(e.success) {
 						var user = e.users[0];
 						alert('Success: ' + user.username + ' was updated with ' + user.custom_fields.platoon);
+					} else {
+						alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
+					}
+				});*/
+				Cloud.Objects.update({
+					classname: 'platoon',
+					id: groupID,
+					fields: {
+						soldiers: args
+					}
+
+				}, function(e) {
+					if(e.success) {
+						//var car = e.cars[0];
+						alert("it did something");
 					} else {
 						alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
 					}
