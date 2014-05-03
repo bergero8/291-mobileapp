@@ -101,8 +101,8 @@ function Controller() {
             password: $.txtPass.value
         }, function(e) {
             if (e.success) {
-                var user = e.users[0];
-                alert("Success:\nid: " + user.id + "\n" + "sessionId: " + Cloud.sessionId + "\n" + "first name: " + user.first_name + "\n" + "last name: " + user.last_name);
+                e.users[0];
+                $.text.text = "You are logged in!";
                 $.txtUser.setVisible(false);
                 $.txtPass.setVisible(false);
                 $.btnLogin.setVisible(false);

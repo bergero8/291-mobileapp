@@ -78,7 +78,7 @@
 	 * Pick user from table
 	 */
 	$.userTable.addEventListener('click', function(e) {
-		
+
 		APP.addChild("groupSelect", e.row.name);
 
 	});

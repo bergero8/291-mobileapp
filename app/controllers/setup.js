@@ -55,10 +55,15 @@
 				username: $.txtUser.value,
 				password: $.txtPass.value,
 				password_confirmation: $.txtPass.value,
-				goal: $.txtGoal.value,
-				cost: $.txtCost.value,
-				time: $.txtTime.value + " " + goalTime,
-				platoon: null
+				first_name: $.txtFirst.value,
+				last_name: $.txtLast.value,
+				custom_fields: {
+					goal: $.txtGoal.value,
+					cost: $.txtCost.value,
+					time: $.txtTime.value + " " + goalTime,
+					platoon: "noEntry",
+					savings: "noEntry"
+				}
 			}, function(e) {
 				if(e.success) {
 					var user = e.users[0];

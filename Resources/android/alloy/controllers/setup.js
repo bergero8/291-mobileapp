@@ -42,6 +42,22 @@ function Controller() {
         height: "50"
     });
     $.__views.Wrapper.add($.__views.txtUser);
+    $.__views.txtFirst = Ti.UI.createTextField({
+        id: "txtFirst",
+        hintText: "First name",
+        color: "#336699",
+        width: "300",
+        height: "50"
+    });
+    $.__views.Wrapper.add($.__views.txtFirst);
+    $.__views.txtLast = Ti.UI.createTextField({
+        id: "txtLast",
+        hintText: "Last name",
+        color: "#336699",
+        width: "300",
+        height: "50"
+    });
+    $.__views.Wrapper.add($.__views.txtLast);
     $.__views.txtPass = Ti.UI.createTextField({
         id: "txtPass",
         hintText: "Password",
@@ -175,10 +191,15 @@ function Controller() {
                 username: $.txtUser.value,
                 password: $.txtPass.value,
                 password_confirmation: $.txtPass.value,
-                goal: $.txtGoal.value,
-                cost: $.txtCost.value,
-                time: $.txtTime.value + " " + goalTime,
-                platoon: null
+                first_name: $.txtFirst.value,
+                last_name: $.txtLast.value,
+                custom_fields: {
+                    goal: $.txtGoal.value,
+                    cost: $.txtCost.value,
+                    time: $.txtTime.value + " " + goalTime,
+                    platoon: "noEntry",
+                    savings: "noEntry"
+                }
             }, function(e) {
                 if (e.success) {
                     var user = e.users[0];

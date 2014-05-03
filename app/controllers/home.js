@@ -41,11 +41,7 @@ $.btnLogin.addEventListener('click', function() {
 	}, function(e) {
 		if(e.success) {
 			var user = e.users[0];
-			alert('Success:\n' +
-				'id: ' + user.id + '\n' +
-				'sessionId: ' + Cloud.sessionId + '\n' +
-				'first name: ' + user.first_name + '\n' +
-				'last name: ' + user.last_name);
+			$.text.text = "You are logged in!";
 			$.txtUser.setVisible(false);
 			$.txtPass.setVisible(false);
 			$.btnLogin.setVisible(false);

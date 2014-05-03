@@ -4,6 +4,8 @@
 			<Require type="widget" src="com.mcongrove.navigationBar" id="NavigationBar" image="data/logo.png" />
 		
 				<TextField id="txtUser" hintText="Soldier Name(User name)" backgroundColor="Transparent" width="300"  height="50" />
+				<TextField id="txtFirst" hintText="First name" color="#336699" width="300"  height="50" />
+				<TextField id="txtLast" hintText="Last name" color="#336699" width="300"  height="50" />
 				<TextField id="txtPass" hintText="Password" passwordMask="true" width="300"  height="50" />
 				<TextField id="txtGoal" hintText="Goal" backgroundColor="#E6E6E6" width="300"  height="50" />
 				<TextField id="txtCost" hintText="Cost" color="#336699" width="300"  height="50" />

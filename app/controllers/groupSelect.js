@@ -5,7 +5,6 @@
 	 */
 	var APP = require("core");
 	var Cloud = require("ti.cloud");
-	var groupPass = require("group");
 	var args = arguments[0] || {};
 
 	/**
@@ -73,8 +72,42 @@
 	$.groupTable.addEventListener('click', function(e) {
 
 		var groupSelected = e.row.name;
-		//var friend = groupPass.getFriend();
-		alert(args);
+
+		var dialog = Ti.UI.createAlertDialog({
+			confirm: 0,
+			cancel: 1,
+			buttonNames: ['Confirm', 'Cancel'],
+			message: 'Add ' + args + ' to ' + groupSelected + '?',
+			title: 'Add Soldier'
+		});
+		dialog.addEventListener('click', function(e) {
+			if(e.index === e.source.confirm) {
+				//alert('user updated');
+				//userUpdate(groupSelected);
+				/*
+				 * update user with platoon selection
+				 */
+
+				var userUpdate = Cloud.Users.update({//!!!!!!!!!!!!!!!!!!!!!!!!!
+					custom_fields: {				//this updates the main user not the user searched
+													// for and clicked on(which is what we want)
+						platoon: groupSelected
+
+					}
+
+				}, function(e) {
+					if(e.success) {
+						var user = e.users[0];
+						alert('Success: ' + user.username + ' was updated with ' + user.custom_fields.platoon);
+					} else {
+						alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
+					}
+				});
+
+			}
+
+		});
+		dialog.show();
 
 	});
 
