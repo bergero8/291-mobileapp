@@ -3,20 +3,20 @@
 		<!--<View id="Wrapper" name="Setup" backgroundColor="white" backgroundImage="/ArmyBW.gif" layout="vertical">-->
 			<Require type="widget" src="com.mcongrove.navigationBar" id="NavigationBar" image="data/logo.png" />
 		
-				<TextField id="txtUser" hintText="Soldier Name(User name)" color="#004700" backgroundColor="Transparent" width="300"  height="50" />
-				<TextField id="txtFirst" hintText="First name" color="#004700" backgroundColor="Transparent" width="300"  height="50" />
-				<TextField id="txtLast" hintText="Last name" color="#004700" backgroundColor="Transparent" width="300"  height="50" />
-				<TextField id="txtPass" hintText="Password" color="#004700" passwordMask="true" backgroundColor="Transparent" width="300"  height="50" />
-				<TextField id="txtGoal" hintText="Goal" color="#004700" backgroundColor="Transparent" width="300"  height="50" />
-				<TextField id="txtCost" hintText="Cost" color="#004700" backgroundColor="Transparent" width="300"  height="50" />
+				<TextField id="txtUser" hintText="Soldier Name(User name)" color="Transparent" opacity="0.3" borderStyle="INPUT_BORDERSTYLE_BEZEL" borderColor="black" width="300"  height="50" />
+				<TextField id="txtFirst" hintText="First name" color="Transparent" opacity="0.3" borderStyle="INPUT_BORDERSTYLE_BEZEL" borderColor="black" width="300"  height="50" />
+				<TextField id="txtLast" hintText="Last name" color="Transparent" opacity="0.3" borderStyle="INPUT_BORDERSTYLE_BEZEL" borderColor="black" width="300"  height="50" />
+				<TextField id="txtPass" hintText="Password"  passwordMask="true" color="Transparent" opacity="0.3" borderStyle="INPUT_BORDERSTYLE_BEZEL" borderColor="black"  width="300"  height="50" />
+				<TextField id="txtGoal" hintText="Goal" color="Transparent" opacity="0.3" borderStyle="INPUT_BORDERSTYLE_BEZEL" borderColor="black" width="300"  height="50" />
+				<TextField id="txtCost" hintText="Cost" color="Transparent" opacity="0.3" borderStyle="INPUT_BORDERSTYLE_BEZEL" borderColor="black" width="300"  height="50" />
 				
-				<View id="btnView" layout="horizontal" height="50dp" layout="horizontal" left="29dp">
+				<View id="btnView" layout="horizontal" height="50dp" left="29dp">
 					<TextField id="txtTime" hintText="Time" color="#336699" width="75"  height="50" />
 					<Button id="btnYear" onClick="timeSelectionY">Year</Button>
 					<Button id="btnMonth" onClick="timeSelectionM">Month</Button>
 					<Button id="btnWeek" onClick="timeSelectionW">Week</Button>
 				</View>
-				<Button id="btnSubmit" backgroundColor="Transparent" color="red">Create User</Button>
+				<Button id="btnSubmit" color="Transparent" opacity="0.3" borderStyle="INPUT_BORDERSTYLE_BEZEL" borderColor="black" color="red">Create User</Button>
 				<Label color="black">Setup new platoon</Label>
 				<Switch id="platoonSwitch" value="false" />
 				<TextField id="txtPlatoon" hintText="Platoon Name" color="#336699" width="300"  height="50" />
