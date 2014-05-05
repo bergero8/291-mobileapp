@@ -37,6 +37,7 @@ function Controller() {
     $.__views.txtUser = Ti.UI.createTextField({
         id: "txtUser",
         hintText: "Soldier Name(User name)",
+        color: "#004700",
         backgroundColor: "Transparent",
         width: "300",
         height: "50"
@@ -45,7 +46,8 @@ function Controller() {
     $.__views.txtFirst = Ti.UI.createTextField({
         id: "txtFirst",
         hintText: "First name",
-        color: "#336699",
+        color: "#004700",
+        backgroundColor: "Transparent",
         width: "300",
         height: "50"
     });
@@ -53,7 +55,8 @@ function Controller() {
     $.__views.txtLast = Ti.UI.createTextField({
         id: "txtLast",
         hintText: "Last name",
-        color: "#336699",
+        color: "#004700",
+        backgroundColor: "Transparent",
         width: "300",
         height: "50"
     });
@@ -61,7 +64,9 @@ function Controller() {
     $.__views.txtPass = Ti.UI.createTextField({
         id: "txtPass",
         hintText: "Password",
+        color: "#004700",
         passwordMask: "true",
+        backgroundColor: "Transparent",
         width: "300",
         height: "50"
     });
@@ -69,7 +74,8 @@ function Controller() {
     $.__views.txtGoal = Ti.UI.createTextField({
         id: "txtGoal",
         hintText: "Goal",
-        backgroundColor: "#E6E6E6",
+        color: "#004700",
+        backgroundColor: "Transparent",
         width: "300",
         height: "50"
     });
@@ -77,7 +83,8 @@ function Controller() {
     $.__views.txtCost = Ti.UI.createTextField({
         id: "txtCost",
         hintText: "Cost",
-        color: "#336699",
+        color: "#004700",
+        backgroundColor: "Transparent",
         width: "300",
         height: "50"
     });
@@ -119,7 +126,7 @@ function Controller() {
         title: "Create User",
         id: "btnSubmit",
         backgroundColor: "Transparent",
-        borderColor: "black"
+        color: "red"
     });
     $.__views.Wrapper.add($.__views.btnSubmit);
     $.__views.__alloyId14 = Ti.UI.createLabel({
@@ -185,6 +192,13 @@ function Controller() {
                 $.txtDrillSerg.setVisible(false);
                 $.txtDrillSerg.setEditable(false);
             }
+        });
+        $("txtUser").change(function() {
+            var value = $(this).val();
+            if ("" == value) {
+                $(this).addClass("red-border");
+                $(this).focus();
+            } else $(this).removeClass("red-border");
         });
         $.btnSubmit.addEventListener("click", function() {
             Cloud.Users.create({
