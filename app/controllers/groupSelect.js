@@ -66,7 +66,7 @@
 					hasChild: true,
 					name: plat.name,
 					id: plat.id,
-
+					soldiers: plat.soldiers
 				});
 
 				var title = Ti.UI.createLabel({
@@ -96,7 +96,8 @@
 
 		var groupSelected = e.row.name;
 		var groupID = e.row.id;
-
+		var newSoldiers = JSON.parse(e.row.soldiers);
+		newSoldiers.push(args);
 		var dialog = Ti.UI.createAlertDialog({
 			confirm: 0,
 			cancel: 1,

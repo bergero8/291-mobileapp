@@ -3,7 +3,7 @@
 		<!--<View id="Wrapper" name="Setup" backgroundColor="white" backgroundImage="/ArmyBW.gif" layout="vertical">-->
 			<Require type="widget" src="com.mcongrove.navigationBar" id="NavigationBar" image="data/logo.png" />
 		
-				<TextField id="txtUser" hintText="Soldier Name(User name)" color="Transparent" opacity="0.3" borderStyle="INPUT_BORDERSTYLE_BEZEL" borderColor="black" width="300"  height="50" />
+				<TextField id="txtUser" hintText="Soldier Name(User name)" color="black" borderStyle="INPUT_BORDERSTYLE_BEZEL" borderColor="black" width="300"  height="50" />
 				<TextField id="txtFirst" hintText="First name" color="Transparent" opacity="0.3" borderStyle="INPUT_BORDERSTYLE_BEZEL" borderColor="black" width="300"  height="50" />
 				<TextField id="txtLast" hintText="Last name" color="Transparent" opacity="0.3" borderStyle="INPUT_BORDERSTYLE_BEZEL" borderColor="black" width="300"  height="50" />
 				<TextField id="txtPass" hintText="Password"  passwordMask="true" color="Transparent" opacity="0.3" borderStyle="INPUT_BORDERSTYLE_BEZEL" borderColor="black"  width="300"  height="50" />

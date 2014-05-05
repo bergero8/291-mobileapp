@@ -37,8 +37,7 @@ function Controller() {
     $.__views.txtUser = Ti.UI.createTextField({
         id: "txtUser",
         hintText: "Soldier Name(User name)",
-        color: "Transparent",
-        opacity: "0.3",
+        color: "black",
         borderStyle: "INPUT_BORDERSTYLE_BEZEL",
         borderColor: "black",
         width: "300",
