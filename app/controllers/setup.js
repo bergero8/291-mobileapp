@@ -30,6 +30,7 @@
 		$.txtPlatoon.setVisible(false);
 		$.txtPlatoon.setEditable(false);
 		$.txtDrillSerg.setVisible(false);
+		$.btnPlatoonSubmit.setVisible(false);
 
 		$.platoonSwitch.addEventListener('click', function() {
 			count++;
@@ -39,11 +40,13 @@
 				$.txtPlatoon.setEditable(true);
 				$.txtDrillSerg.setVisible(true);
 				$.txtDrillSerg.setEditable(true);
+				$.btnPlatoonSubmit.setVisible(true);
 			} else {
 				$.txtPlatoon.setVisible(false);
 				$.txtPlatoon.setEditable(false);
 				$.txtDrillSerg.setVisible(false);
 				$.txtDrillSerg.setEditable(false);
+				$.btnPlatoonSubmit.setVisible(false);
 
 			}
 

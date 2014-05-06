@@ -37,7 +37,8 @@ function Controller() {
     $.__views.txtUser = Ti.UI.createTextField({
         id: "txtUser",
         hintText: "Soldier Name(User name)",
-        color: "black",
+        color: "White",
+        opacity: "0.3",
         borderStyle: "INPUT_BORDERSTYLE_BEZEL",
         borderColor: "black",
         width: "300",
@@ -47,7 +48,7 @@ function Controller() {
     $.__views.txtFirst = Ti.UI.createTextField({
         id: "txtFirst",
         hintText: "First name",
-        color: "Transparent",
+        color: "White",
         opacity: "0.3",
         borderStyle: "INPUT_BORDERSTYLE_BEZEL",
         borderColor: "black",
@@ -58,7 +59,7 @@ function Controller() {
     $.__views.txtLast = Ti.UI.createTextField({
         id: "txtLast",
         hintText: "Last name",
-        color: "Transparent",
+        color: "White",
         opacity: "0.3",
         borderStyle: "INPUT_BORDERSTYLE_BEZEL",
         borderColor: "black",
@@ -70,7 +71,7 @@ function Controller() {
         id: "txtPass",
         hintText: "Password",
         passwordMask: "true",
-        color: "Transparent",
+        color: "White",
         opacity: "0.3",
         borderStyle: "INPUT_BORDERSTYLE_BEZEL",
         borderColor: "black",
@@ -81,7 +82,7 @@ function Controller() {
     $.__views.txtGoal = Ti.UI.createTextField({
         id: "txtGoal",
         hintText: "Goal",
-        color: "Transparent",
+        color: "White",
         opacity: "0.3",
         borderStyle: "INPUT_BORDERSTYLE_BEZEL",
         borderColor: "black",
@@ -92,7 +93,7 @@ function Controller() {
     $.__views.txtCost = Ti.UI.createTextField({
         id: "txtCost",
         hintText: "Cost",
-        color: "Transparent",
+        color: "White",
         opacity: "0.3",
         borderStyle: "INPUT_BORDERSTYLE_BEZEL",
         borderColor: "black",
@@ -136,23 +137,27 @@ function Controller() {
     $.__views.btnSubmit = Ti.UI.createButton({
         title: "Create User",
         id: "btnSubmit",
-        color: "red",
-        opacity: "0.3",
-        borderStyle: "INPUT_BORDERSTYLE_BEZEL",
-        borderColor: "black"
+        borderStyle: "INPUT_BORDERSTYLE_BEZEL"
     });
     $.__views.Wrapper.add($.__views.btnSubmit);
-    $.__views.__alloyId14 = Ti.UI.createLabel({
-        text: "Setup new platoon",
-        color: "black",
+    $.__views.__alloyId14 = Ti.UI.createView({
+        layout: "horizontal",
+        height: "50dp",
         id: "__alloyId14"
     });
     $.__views.Wrapper.add($.__views.__alloyId14);
+    $.__views.__alloyId15 = Ti.UI.createLabel({
+        text: "Setup new platoon?",
+        color: "black",
+        left: "45dp",
+        id: "__alloyId15"
+    });
+    $.__views.__alloyId14.add($.__views.__alloyId15);
     $.__views.platoonSwitch = Ti.UI.createSwitch({
         value: false,
         id: "platoonSwitch"
     });
-    $.__views.Wrapper.add($.__views.platoonSwitch);
+    $.__views.__alloyId14.add($.__views.platoonSwitch);
     $.__views.txtPlatoon = Ti.UI.createTextField({
         id: "txtPlatoon",
         hintText: "Platoon Name",
@@ -191,6 +196,7 @@ function Controller() {
         $.txtPlatoon.setVisible(false);
         $.txtPlatoon.setEditable(false);
         $.txtDrillSerg.setVisible(false);
+        $.btnPlatoonSubmit.setVisible(false);
         $.platoonSwitch.addEventListener("click", function() {
             count++;
             var mod = count % 2;
@@ -199,11 +205,13 @@ function Controller() {
                 $.txtPlatoon.setEditable(true);
                 $.txtDrillSerg.setVisible(true);
                 $.txtDrillSerg.setEditable(true);
+                $.btnPlatoonSubmit.setVisible(true);
             } else {
                 $.txtPlatoon.setVisible(false);
                 $.txtPlatoon.setEditable(false);
                 $.txtDrillSerg.setVisible(false);
                 $.txtDrillSerg.setEditable(false);
+                $.btnPlatoonSubmit.setVisible(false);
             }
         });
         $.btnSubmit.addEventListener("click", function() {
