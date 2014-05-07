@@ -44,6 +44,7 @@
 				var plat = e.Platoon[i];
 				var row = Ti.UI.createTableViewRow({
 					layout: "vertical",
+					color: "black",
 					hasChild: true,
 					name: plat.name,
 					id: plat.id,

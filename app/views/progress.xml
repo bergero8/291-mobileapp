@@ -9,7 +9,11 @@
 			<Button id="btnAnimate">Press me</Button>
 			
 			<ImageView id="convoyImageView" image="/ArmyHum.jpg" top="160" left="30dp"></ImageView>
-		
+		<Label></Label><!-->spacing....<-->
+		<Label></Label>
+		<Label></Label>
+		<Label></Label>
+		<Label></Label>
 		<TextField id="txtSavings" hintText="Enter amount Saved" ></TextField>
 		<Button id="btnSavings">Update Savings</Button>
 		</ScrollView>

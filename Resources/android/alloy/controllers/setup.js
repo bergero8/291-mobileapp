@@ -141,24 +141,24 @@ function Controller() {
         borderStyle: "INPUT_BORDERSTYLE_BEZEL"
     });
     $.__views.Wrapper.add($.__views.btnSubmit);
-    $.__views.__alloyId14 = Ti.UI.createView({
+    $.__views.__alloyId19 = Ti.UI.createView({
         layout: "horizontal",
         height: "50dp",
-        id: "__alloyId14"
+        id: "__alloyId19"
     });
-    $.__views.Wrapper.add($.__views.__alloyId14);
-    $.__views.__alloyId15 = Ti.UI.createLabel({
+    $.__views.Wrapper.add($.__views.__alloyId19);
+    $.__views.__alloyId20 = Ti.UI.createLabel({
         text: "Setup new platoon?",
         color: "black",
         left: "45dp",
-        id: "__alloyId15"
+        id: "__alloyId20"
     });
-    $.__views.__alloyId14.add($.__views.__alloyId15);
+    $.__views.__alloyId19.add($.__views.__alloyId20);
     $.__views.platoonSwitch = Ti.UI.createSwitch({
         value: false,
         id: "platoonSwitch"
     });
-    $.__views.__alloyId14.add($.__views.platoonSwitch);
+    $.__views.__alloyId19.add($.__views.platoonSwitch);
     $.__views.txtPlatoon = Ti.UI.createTextField({
         id: "txtPlatoon",
         hintText: "Platoon Name",
