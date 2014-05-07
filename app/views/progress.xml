@@ -9,7 +9,9 @@
 			<Button id="btnAnimate">Press me</Button>
 			
 			<ImageView id="convoyImageView" image="/ArmyHum.jpg" top="160" left="30dp"></ImageView>
-		<Label>Progress check</Label>
+		
+		<TextField id="txtSavings" hintText="Enter amount Saved" ></TextField>
+		<Button id="btnSavings">Update Savings</Button>
 		</ScrollView>
 	</View>
 </Alloy>

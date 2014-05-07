@@ -111,7 +111,8 @@ function Controller() {
     $.__views.txtTime = Ti.UI.createTextField({
         id: "txtTime",
         hintText: "Time",
-        color: "#336699",
+        color: "White",
+        opacity: "0.3",
         width: "75",
         height: "50"
     });

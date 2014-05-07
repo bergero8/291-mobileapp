@@ -48,7 +48,7 @@
 			y: 5
 		},
 		shadowRadius: 3,
-		text: 'Start',
+		//text: 'Start',
 		textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
 		top: 100,
 		left: 30,
@@ -67,7 +67,7 @@
 			y: 5
 		},
 		shadowRadius: 3,
-		text: 'Goal',
+		//text: 'Goal',
 		textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
 		top: 10,
 		left: 250,
