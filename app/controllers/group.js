@@ -22,7 +22,7 @@
 			$.NavigationBar.showBack(function(_event) {
 				APP.removeChild(true);
 			});
-		}	
+		}
 	};
 
 	/*
@@ -69,7 +69,7 @@
 
 	$.btnFriend.addEventListener('click', function() {
 		var first = $.txtUserFirst.value;
-		var last = $.txtUserLast.value;
+		//var last = $.txtUserLast.value;
 
 		Cloud.Users.query({
 			page: 1,

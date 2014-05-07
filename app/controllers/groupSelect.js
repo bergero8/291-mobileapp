@@ -66,7 +66,7 @@
 					hasChild: true,
 					name: plat.name,
 					id: plat.id,
-					soldiers: plat.soldiers
+					//soldiers: plat.soldiers Quinn add
 				});
 
 				var title = Ti.UI.createLabel({
@@ -96,8 +96,8 @@
 
 		var groupSelected = e.row.name;
 		var groupID = e.row.id;
-		var newSoldiers = JSON.parse(e.row.soldiers);
-		newSoldiers.push(args);
+		//var newSoldiers = JSON.parse(e.row.soldiers); Quinn add
+		//newSoldiers.push(args); Quinn add
 		var dialog = Ti.UI.createAlertDialog({
 			confirm: 0,
 			cancel: 1,
@@ -138,7 +138,7 @@
 				}, function(e) {
 					if(e.success) {
 						//var car = e.cars[0];
-						alert("it did something");
+						alert(args + ' added to ' + groupSelected);
 						APP.removeChild(); ///////////////
 					} else {
 						alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
