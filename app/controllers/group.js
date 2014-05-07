@@ -22,10 +22,7 @@
 			$.NavigationBar.showBack(function(_event) {
 				APP.removeChild(true);
 			});
-		}
-
-		//showPlatoons();
-
+		}	
 	};
 
 	/*
@@ -44,7 +41,6 @@
 				var plat = e.Platoon[i];
 				var row = Ti.UI.createTableViewRow({
 					layout: "vertical",
-					color: "black",
 					hasChild: true,
 					name: plat.name,
 					id: plat.id,
@@ -56,7 +52,7 @@
 					font: {
 						fontFamily: "bold",
 						fontSize: "20dp",
-						fontColor: "black"
+						fontColor: "black",
 					},
 					left: "10dp"
 				});

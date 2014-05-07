@@ -9,8 +9,8 @@
 		<Label>Contact Platoon</Label>
 		<TableView id="groupTable" height="100dp"/>
 		
-		<Label color="black">To add soldier to Platton, fill in text fields below and click button</Label>
-		<TextField id="txtUserFirst" hintText="First name"width="300dp">Enter Friend first name</TextField>
+		<Label color="black">To add soldier to Platoon, fill in text fields below and click button</Label>
+		<TextField id="txtUserFirst" hintText="First name" width="300dp">Enter Friend first name</TextField>
 		<!--<TextField id="txtUserLast" width="300dp">Enter Friend last name</TextField>-->
 		<Button id="btnFriend">Soldier Lookup</Button>
 		<TableView id="userTable"/>
