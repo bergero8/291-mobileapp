@@ -1,0 +1,8 @@
+<Alloy>
+	<ScrollView id="Wrapper" name="Platoon" backgroundColor="white" layout="vertical">
+		<Require type="widget" src="com.mcongrove.navigationBar" id="NavigationBar" image="data/logo.png" />
+		<Label id="msgLabel"></Label>
+		<TextField id="txtMsg" hintText="Enter message" width="300dp"></TextField>
+		
+	</ScrollView>
+</Alloy>

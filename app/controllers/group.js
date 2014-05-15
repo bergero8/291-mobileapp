@@ -67,6 +67,11 @@
 		}
 	});
 
+	$.groupTable.addEventListener('click', function(e) {
+
+		APP.addChild("message", e.row.name);
+	});
+
 	$.btnFriend.addEventListener('click', function() {
 		var first = $.txtUserFirst.value;
 		//var last = $.txtUserLast.value;
@@ -91,6 +96,7 @@
 						layout: "vertical",
 						hasChild: true,
 						name: user.username,
+						id: user.id ///////////////////////////////////////
 
 					});
 					var title = Ti.UI.createLabel({
@@ -118,7 +124,7 @@
 	 */
 	$.userTable.addEventListener('click', function(e) {
 
-		APP.addChild("groupSelect", e.row.name);
+		APP.addChild("groupSelect", e.row.id); /////////////////////////////////////////
 
 	});
 

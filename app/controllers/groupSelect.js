@@ -6,8 +6,8 @@
 	var APP = require("core");
 	var Cloud = require("ti.cloud");
 	var args = arguments[0] || {};
-	//var CONFIG = arguments[0];
 	var CONFIG = true;
+
 	/**
 	 * Initializes the controller
 	 */
@@ -66,7 +66,7 @@
 					hasChild: true,
 					name: plat.name,
 					id: plat.id,
-					//soldiers: plat.soldiers Quinn add
+					soldiers: plat.soldiers //Quinn add
 				});
 
 				var title = Ti.UI.createLabel({
@@ -96,8 +96,8 @@
 
 		var groupSelected = e.row.name;
 		var groupID = e.row.id;
-		//var newSoldiers = JSON.parse(e.row.soldiers); Quinn add
-		//newSoldiers.push(args); Quinn add
+		var newSoldiers = JSON.parse(e.row.soldiers); ////////////////////Quinn add
+		newSoldiers.push(args); //////////////////////Quinn add
 		var dialog = Ti.UI.createAlertDialog({
 			confirm: 0,
 			cancel: 1,
@@ -107,32 +107,16 @@
 		});
 		dialog.addEventListener('click', function(e) {
 			if(e.index === e.source.confirm) {
-				//alert('user updated');
-				//userUpdate(groupSelected);
 				/*
 				 * update user with platoon selection
 				 */
 
-				/*var userUpdate = Cloud.Users.update({ //!!!!!!!!!!!!!!!!!!!!!!!!!
-					custom_fields: { //this updates the main user not the user searched
-						// for and clicked on(which is what we want)
-						platoon: groupSelected
-
-					}
-
-				}, function(e) {
-					if(e.success) {
-						var user = e.users[0];
-						alert('Success: ' + user.username + ' was updated with ' + user.custom_fields.platoon);
-					} else {
-						alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
-					}
-				});*/
 				Cloud.Objects.update({
 					classname: 'Platoon',
 					id: groupID,
 					fields: {
-						soldiers: args
+						//soldiers: args
+						soldiers: newSoldiers
 					}
 
 				}, function(e) {
